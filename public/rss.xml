@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Olivia Sculley</title>
+    <link>https://olivia.sculley.dev/</link>
+    <description>Recent content on Olivia Sculley</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 7 Jan 2024 00:00:00 -0600</lastBuildDate>
+    <atom:link href="https://olivia.sculley.dev/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Remember to feed your ZFS array</title>
+      <link>https://olivia.sculley.dev/#/posts/feed-your-zfs/</link>
+      <pubDate>Sun, 05 Jun 2022 00:00:00 -0600</pubDate>
+      <guid>https://olivia.sculley.dev/#/posts/feed-your-zfs/</guid>
+      <description>So, I&amp;rsquo;ve talked about my project server in the past, but I wanted to
+        give a bit of an update after upgrading my server a bit. I go over more details in the
+        previous post, but basically I had been running over 100 docker containers of various
+        personal services with only 32 gigs of ram, which resulted in a bit of swap usage and no
+        excess available ram, until now!</description>
+    </item>
+    <item>
+      <title>Code Server</title>
+      <link>https://olivia.sculley.dev/#/posts/code-server/</link>
+      <pubDate>Thu, 20 Jan 2022 00:00:00 -0500</pubDate>
+      <guid>https://olivia.sculley.dev/#/posts/code-server/</guid>
+      <description>So, imagine if there was a portable, convenient way to do software development
+        from any of your web-capable devices, but also leverage the power of beefier machines to
+        compile and run heavier applications? What if this coding environment was reproducible and
+        allowed you to seemlessly switch between different devices or operating systems and pick up
+        right where you left off?
+        If you guessed it, this coding environment already exists from code-server, which lets you
+        run VS Code on a remote server, accessible through the browser!</description>
+    </item>
+    <item>
+      <title>Self-hosted</title>
+      <link>https://olivia.sculley.dev/#/posts/hosted/</link>
+      <pubDate>Wed, 08 Dec 2021 00:00:00 -0600</pubDate>
+      <guid>https://olivia.sculley.dev/#/posts/hosted/</guid>
+      <description>I feel like a home server is a bit like the techie&amp;rsquo;s project car. It
+        might not work perfectly 100% of the time, and it might be a bit louder and take up more
+        space in your garage, closet, or living room (if you&amp;rsquo;re like me) than your
+        significant other might hope, but there&amp;rsquo;s nothing more rewarding than getting to
+        take it out for a spin at the end of the day.</description>
+    </item>
+    <item>
+      <title>Free Software Hall of Fame</title>
+      <link>https://olivia.sculley.dev/#/posts/free-software/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 -0600</pubDate>
+      <guid>https://olivia.sculley.dev/#/posts/free-software/</guid>
+      <description>As you might know, I&amp;rsquo;m an avid free software advocate, and I try to use
+        free software over proprietary ones as much as I reasonably can. These are some of the free
+        software projects that I have found, which I either use on a daily basis or have made me say
+        &amp;ldquo;how did I possibly live before this?&amp;rdquo;. Hopefully you&amp;rsquo;ll be
+        able to discover a project that&amp;rsquo;ll make you feel the same, too!</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+{
+  "author": "Olivia Sculley <olivia@sculley.dev> (https://olivia.sculley.dev/)",
+  "repository": "github:oliviasculley/oliviasculley.github.io",
+  "scripts": {
+    "build-all": "npm run build-docs && vite build",
+    "build-cv": "cd public/cv && latexmk -pdf -xelatex cv.tex",
+    "build-docs": "npm run build-cv && npm run build-resume",
+    "build-resume": "cd public/resume && latexmk -pdf -xelatex resume.tex",
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview",
+    "start": "vite",
+    "watch-cv": "cd public/cv && latexmk -pdf -pvc -xelatex -interaction=nonstopmode cv.tex",
+    "watch-resume": "cd public/resume && latexmk -pdf -pvc -xelatex -interaction=nonstopmode resume.tex"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "babel-preset-solid": "^1.8.6",
+    "postcss": "^8.4.24",
+    "solid-devtools": "^0.27.3",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "dependencies": {
+    "@solidjs/router": "^0.10.5",
+    "gsap": "^3.12.4",
+    "rehype-raw": "^7.0.0",
+    "solid-js": "^1.8.7",
+    "solid-markdown": "^2.0.0",
+    "three": "^0.160.0"
+  }
+}

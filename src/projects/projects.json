@@ -1,0 +1,137 @@
+[
+  {
+    "title": "Pathfinder",
+    "slug": "pathfinder",
+    "imageSrc": "/projects/pathfinder.jpg",
+    "startYear": "2023",
+    "endYear": "Current",
+    "content": "Pathfinder is a project for robotic metrology mainly developed by a separate company that we've been helping to get ready for production use.\n\nIt's been great to jump back into robotics and the latest developments from C++, as well as getting familiar with some fantastic libraries such as ImGUI, Magnum, Corrade, and FCL.\n\nStay tuned for more!"
+  },
+  {
+    "title": "Slipstream",
+    "slug": "slipstream",
+    "link": "https://www.goslipstream.app",
+    "imageSrc": "/projects/slipstream.jpg",
+    "startYear": "2020",
+    "endYear": "Current",
+    "content": "I've really enjoyed the opportunity to work on greenfield development as the lead developer on Slipstream, a business process management application aimed at small businesses. Slipstream's stack of Elixir, Phoenix, and Vanilla JS/Tailwind CSS has been an absolute joy to learn and work with, and being able to implement the actor model in Slipstream's architecture has been especially rewarding.\n\nIn the 3+ years of working on Slipstream, I've implemented many core features like versioning, tenancy, synthesized data exports, user notifications, custom integrations, and building out the core UI component library and storybook. We're currently using CI with Github Actions, error reporting with Sentry, documentation with Mermaid, payments with Stripe and email integration with Customer.io. However, it's truly been rewarding to work with and mentor team members on a larger and longer term project, navigating all the challenges like onboarding, improving our development process as a team, and tech debt prioritization.\n\nBy the way, we're currently looking for 3 more businesses to participate in our Slipstream beta program. We will help you identify, document, and systemize your core processes in Slipstream and give you an extended free trial (6 months). Please message [Pete](https://www.linkedin.com/in/petebroderick/) on Linkedin if you're interested!"
+  },
+  {
+    "title": "NERVV",
+    "slug": "nervv",
+    "link": "https://github.com/oliviasculley/nervv",
+    "imageSrc": "/projects/junlab.jpg",
+    "startYear": "2019",
+    "endYear": "2020",
+    "content": "At Purdue University's [Jun Laboratory](https://web.ics.purdue.edu/~jun25/), I was able to lead development on a virtual twin application advised by Dr. Huitaek Yun. Along the way, I created NERVV, an open-source Unity 3D-based framework to synchronize and control ROS-based real-world manufacturing devices with support for virtual reality devices.\n\nNERVV offers standardized interfaces for core robotic components and input/output sources for easy integration, synchronization and control with real-world manufacturing devices. Adding dynamically generated robotic controls in VR is as easy as configuring the mesh and joint dimensions in the Unity Inspector and hitting play!\n\nWhile I don't have any of the videos of using NERVV with a VR headset and controllers to control the JunLab robots in real life (😭😭😭), I did manage to find a recording of the inverse kinematics working in Unity's game engine. Enjoy!\n\n<video src=\"/projects/inverse-kinematics.mp4\"></video>"
+  },
+  {
+    "title": "Purdue Electrical Engineering Virtual Labs",
+    "slug": "purdue-elec-labs",
+    "link": "https://www.ecshowcase.com/projects/2020-01-01-coe-breadboard-virtual-labs/index.html",
+    "imageSrc": "/projects/elec.jpg",
+    "startYear": "2019",
+    "endYear": "2020",
+    "content": "Made for Purdue's College of Engineering, this virtual lab was built from the ground up to fully simulate the process of diagramming circuits with a breadboard. With this application, users can arrange 3D components in order to build circuits which are then agnostically checked according to the diagram. This virtual lab also implements SPICE probing to give students actual voltage readings or plot voltage behavior over time.It's been incredibly rewarding to gradually build this application from scratch, and I've spent a lot of time ensuring that the structure is simple, modular, and accommodating for future development.\n\nAs of Fall 2020, it features 10 modules with 3-4 circuits each, as well as Brightspace support for automated grading. As part of the second phase of development, I was able to coordinate development with [Saad Jamal](https://www.linkedin.com/in/saad-jmal/), who was a big help to add more labs! You can [read more about it in this article here](https://www.purdue.edu/newsroom/purduetoday/releases/2020/Q4/purdues-forward-thinking-virtual-engineering-and-science-lab-initiative-helped-meet-challenge-of-a-global-pandemic-and-more.html)."
+  },
+  {
+    "title": "Purdue Aeronautics Virtual Labs",
+    "slug": "purdue-aero-labs",
+    "link": "https://www.ecshowcase.com/projects/2020-01-01-aerolabs/index.html",
+    "imageSrc": "/projects/aero.jpg",
+    "startYear": "2019",
+    "endYear": "2020",
+    "content": "One of the first projects made for Purdue's College of Engineering, the aviation and aeronautic labs needed to be virtualized into a 3D, web-based simulation. The submodules of this lab allow the user to practice procedures with industrial machinery, perform experiments, and observe virtual data readouts.\n\nWhile I was responsible for most of the implementation, the amazing Kenny Park helped me with finishing this application off (especially lab 6) and adding lots of polish. Overall, we're really happy with how this lab turned out!\n\nThis lab was also presented to the [American Society for Engineering Education](https://peer.asee.org/35339), which you can view with the DOI `10.18260/1-2--35339`."
+  },
+  {
+    "title": "Purdue Chemical Engineering Virtual Labs",
+    "slug": "purdue-chem-labs",
+    "link": "https://envision-public-builds.s3.amazonaws.com/ChemLab/index.html",
+    "imageSrc": "/projects/chem.jpg",
+    "startYear": "2019",
+    "endYear": "2020",
+    "content": "A project virtualizing chemical engineering labs into web-based 3D interactive simulations for the Purdue College of Engineering. These labs included calculating properties of mixed chemicals, taking data points, and graphing outcomes.\n\nSimilarly to the [Civil Engineering labs](/projects/purdue-hydro-labs), I helped to create the project from scratch and ended up contributing to roughly half of the final product."
+  },
+  {
+    "title": "Purdue Civil Engineering Virtual Labs",
+    "slug": "purdue-hydro-labs",
+    "link": "https://envision-public-builds.s3.amazonaws.com/HydroLab/index.html",
+    "imageSrc": "/projects/hydro.jpg",
+    "startYear": "2019",
+    "endYear": "2020",
+    "content": "A project virtualizing civil engineering hydraulics labs into web-based 3D interactive simulations for the Purdue College of Engineering. These labs included simulating values from hydraulic phenomenon and industrial systems, as well as creating appropriate visualizations.\n\nI was the first to break ground on the project initially, and ended up joined by the amazing Kenny Park who helped contribute to half of the project as it stands today."
+  },
+  {
+    "title": "Purdue Envision Center Showcase Site",
+    "slug": "envision-showcase",
+    "link": "https://www.ecshowcase.com",
+    "imageSrc": "/projects/site.jpg",
+    "startYear": "2020",
+    "content": "This one is pretty self-explanatory, but I really like how it turned out! Piggy-backing off some work done by an earlier developer and a template, I modified it pretty heavily in order to support projects and models, as well as a lightweight search function."
+  },
+  {
+    "title": "Subsurface Tile Drainage",
+    "slug": "tile-drainage",
+    "link": "https://envision-public-builds.s3.amazonaws.com/TileDrainage/index.html",
+    "imageSrc": "/projects/field.jpg",
+    "startYear": "2020",
+    "content": "A quick project with [Dr. Jane Frankenberger](https://engineering.purdue.edu/~frankenb/) to build a web-based interactive visualization tool illustrating the impact of varying water drainage parameters on water runoff. This project actually involved lots of close coordination with one of the most talented tech artists I know, [Andrew Sumner](https://www.artstation.com/andrewsumner).\n\nWhile the animation itself may seem simplistic, it actually required significant R&D before becoming the final product that you can see today. With some of Drew's mind-bending Houdini magic, we were able to procedurally generate the field and animations, and package them in a compatible format for a lightweight and accessible online release."
+  },
+  {
+    "title": "Pollinator Dissection",
+    "slug": "pollinator-dissection",
+    "link": null,
+    "imageSrc": "/projects/dissection.jpg",
+    "startYear": "2019",
+    "content": "Pollinator Dissection is a web-based 3D virtualized dissection application aimed to help middle and high school students learn more about several important plant-pollinator relationships.\n\nWhen I first joined the project, an early prototype had been partially completed by a developer who had already moved on into industry, but the project was far from complete. While the core recursive dissection pattern was already in place, I transformed the project from a simple proof-of-concept to the fully-featured application you can view today. The large number of dissection specimens meant that this project required heavy collaboration with artists as well. Ultimately, Pollinator Dissection was a great starting project and the heavy asset involvement helped me hit the ground running with all of the fantastic personnel at the Envision Center.\n\nYou can [read more about it at this article here](https://www.itap.purdue.edu/newsroom/2020/200602_PollinatorProtection.html)."
+  },
+  {
+    "title": "Chicken Digestion Game",
+    "slug": "chicken-digestion",
+    "link": "https://www.ecshowcase.com/projects/2019-01-01-poultry-digestive-game/index.html",
+    "imageSrc": "/projects/chicken.jpg",
+    "startYear": "2019",
+    "content": "The aptly named \"Chicken Digestion Game\" is a short online point-and-click game providing a comprehensive overview of a chicken's digestive system targeted towards fourth graders in a classroom environment. While most of the design was provided, the project was a ton of fun to work on since we had full reign over presentation, art, and animation!\n\nI was extremely lucky to work with the incredibly talented [Kalli Zhang](https://zkalli.portfoliobox.net/) to create the overall visual feel of the project, and I am very satisfied with how it turned out. The developmental timeline was a bit short since the project's design was a bit simple in scope, and I got to learn a lot about Unity's 2D pipeline and event system just a bit better."
+  },
+  {
+    "title": "Turkey Animal Welfare",
+    "slug": "turkey-welfare",
+    "link": "https://www.ecshowcase.com/projects/2018-01-12-turkey-animal-welfare/index.html",
+    "imageSrc": "/projects/turkey.jpg",
+    "startYear": "2019",
+    "content": "An educational experience created for [Dr. Marisa Erasmus](https://ag.purdue.edu/ansc/erasmus/) presenting a short instructional narrative illustrating differences in animal welfare on turkey farms. Since this narrative project was shorter in scope and similar to [Pollinator - Visit to the Royal Palace](/projects/pollinator-royal-palace), I was able to reuse a lot of the narrative logic that I had created previously. You can read more about it in this [article](https://ag.purdue.edu/stories/students-are-gobbling-up-this-simulation/) written by Emma Ea Ambrose!"
+  },
+  {
+    "title": "Pollinator - Visit to the Royal Palace",
+    "slug": "pollinator-royal-palace",
+    "link": null,
+    "imageSrc": "/projects/royal.jpg",
+    "startYear": "2019",
+    "content": "When I jumped into the project, development had just about wrapped up on its dialog and was ready to begin major production. A simple stack-based proof of concept was passed on to me, but it was clear that the complexity of the branching narration required a much more powerful and flexible system. I created a custom serializable dialog system for Visit to the Royal Palace that was later used in [Turkey Animal Welfare](/projects/turkey-welfare) as well. You can read more about this project at [this article here](https://www.itap.purdue.edu/newsroom/2020/200602_PollinatorProtection.html)!"
+  },
+  {
+    "title": "Pollinator Matching Game",
+    "slug": "pollinator-matching",
+    "link": null,
+    "imageSrc": "/projects/matching.jpg",
+    "startYear": "2019",
+    "content": "Pollinator Matching Game is a simple web-based matching game aimed to help middle and high school students learn more about several important plant-pollinator relationships. When I was put onto the project, the majority of the backend logic was already completed, however, more work on the UI and polish was still needed. Ultimately, I helped implement a more responsive UI design and ensured a smooth and successful deployment."
+  },
+  {
+    "title": "MINT Mobile VR",
+    "slug": "mint-mobile",
+    "link": "https://chopralab.github.io/MINT/index.html",
+    "imageSrc": "/projects/mint.jpg",
+    "startYear": "2018",
+    "content": "At Chopralab, I helped port MINT, an app to visualize proteins in virtual reality, to Google Cardboard. While it's no longer available on the Android app store, you can view this recording for a preview of what it was like!\n\n<video src=\"/projects/mint-mobile.mp4\"></video>\n\nI also co-authored the [research paper on MINT](https://chemrxiv.org/engage/chemrxiv/article-details/60c744b5bdbb8901e2a3888a) which you can view with the DOI `10.26434/chemrxiv.9889994.v1`, created the MINT website, and improved the lab website."
+  },
+  {
+    "title": "Rival Esports",
+    "slug": "rival-esports",
+    "link": "https://rivalesports.com/",
+    "imageSrc": "/projects/rival.png",
+    "startYear": "2016",
+    "endYear": "2017",
+    "content": "While I was in high school, I helped create motion graphics for [Rival Esports](https://rivalesports.com/), a Rocket League and Battlerite Esports tournament. Giving away hundreds of dollars and streaming to thousands of live viewers during our weekly Rocket League tournaments, we even managed to get featured on the frontpage of [twitch.tv](https://www.twitch.tv/rivalesports)!\n\nI utilized my previous experience in compositing and motion graphics to produce animated lower thirds, transitions and graphics that worked with OBS. Combined with custom video-game modding technology, Rival Esports was quickly known for visual excellence that easily surpassed any other broadcasters in the area and emulated the quality of professional sports broadcasts."
+  }
+]

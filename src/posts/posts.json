@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Remember to feed your ZFS array",
+    "description": "Adventures of actually having enough ram",
+    "lastUpdated": "2024-01-21",
+    "slug": "feed-your-zfs",
+    "imageSrc": "/posts/feed-your-zfs/cat.jpg",
+    "contentSrc": "/posts/feed-your-zfs.md"
+  },
+  {
+    "title": "Code Server",
+    "description": "Setting up code-server for remote development",
+    "lastUpdated": "2024-01-21",
+    "slug": "code-server",
+    "imageSrc": "/posts/code-server/code-server.jpg",
+    "contentSrc": "/posts/code-server.md"
+  },
+  {
+    "title": "Self-hosted",
+    "description": "A short post about my homelab",
+    "lastUpdated": "2024-01-21",
+    "slug": "hosted",
+    "imageSrc": "/posts/hosted/grafana.jpg",
+    "contentSrc": "/posts/hosted.md"
+  },
+  {
+    "title": "Free Software Hall of Fame",
+    "description": "Some of my favorite free software projects",
+    "lastUpdated": "2024-01-21",
+    "slug": "free-software",
+    "imageSrc": "/posts/free-software/software.jpg",
+    "contentSrc": "/posts/free-software.md"
+  }
+]
