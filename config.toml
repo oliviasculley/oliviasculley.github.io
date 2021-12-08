@@ -72,6 +72,7 @@ canonifyurls = true
 # [[menu.misc]]
 
 [params]
+  mainSections = ['posts']
   dateFormat = "2 January 2006"
   keywords = ["olivia", "sculley", "development", "dev", "software"]
   
