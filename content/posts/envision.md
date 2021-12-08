@@ -3,7 +3,7 @@ title:  "Envision Center projects"
 description: "Projects by Olivia Sculley"
 date: 2019-08-08T00:00:00-06:00
 categories: ["portfolio"]
-type: post
+type: posts
 ---
 
 I worked at the [Purdue Envision
@@ -123,7 +123,7 @@ we were able to procedurally generate the field and animations, and package them
 in a compatible format for a lightweight and accessible online release.
 
 ### [Pollinator Matching Game](https://extension.entm.purdue.edu/POL_Virt_Learn/dissection.html)
- 
+
 {{< image classes="fancybox" src="/images/posts/envision/matching.png" title="Pollinator Matching Game Screenshot" >}}
 
 Pollinator Matching Game is a simple web-based matching game aimed to help

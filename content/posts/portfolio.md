@@ -3,7 +3,7 @@ title: "Portfolio"
 description: "A listing of my professional projects"
 date: 2020-08-20T00:00:00-06:00
 categories: ["portfolio"]
-type: post
+type: posts
 ---
 
 This page is a centralized listing of my professional work and will be updated

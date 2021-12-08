@@ -4,7 +4,7 @@ description: "Some of my favorite free software projects"
 date: 2020-03-20T00:00:00-06:00
 coverImage: images/posts/software.jpg
 categories: ["software"]
-type: post
+type: posts
 ---
 
 As you might know, I'm an avid [free software
