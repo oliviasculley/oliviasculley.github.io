@@ -1,3 +1,4 @@
 [submodule "themes/tranquilpeak"]
 	path = themes/tranquilpeak
-	url = git@github-oliviasculley:oliviasculley/hugo-tranquilpeak-theme.git
+	url = git@github.com:oliviasculley/hugo-tranquilpeak-theme.git
+	branch = olivia
