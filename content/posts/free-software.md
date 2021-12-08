@@ -2,7 +2,7 @@
 title: "Free Software Hall of Fame"
 description: "Some of my favorite free software projects"
 date: 2020-03-20T00:00:00-06:00
-coverImage: images/posts/software.jpg
+coverImage: /images/posts/software.jpg
 categories: ["software"]
 type: posts
 ---
