@@ -44,9 +44,7 @@ Fall 2020, it features 10 modules with 3-4 circuits each, as well as Brightspace
 support for automated grading. As part of the second phase of development, I've
 been able to coordinate development with developers such as [Saad
 Jamal](https://www.linkedin.com/in/saad-jmal/), who's been a big help! You can
-view the source code on [the RCAC's github page
-here](https://github.rcac.purdue.edu/EnvisionCenter/eleclabs-public), or [read
-more about it in this article
+[read more about it in this article
 here](https://www.purdue.edu/newsroom/purduetoday/releases/2020/Q4/purdues-forward-thinking-virtual-engineering-and-science-lab-initiative-helped-meet-challenge-of-a-global-pandemic-and-more.html).
 
 ### [College of Engineering - Aeronautics Virtual Labs](https://envision-public-builds.s3.amazonaws.com/AeroLab/index.html)
@@ -58,9 +56,8 @@ virtualizes instructional aviation and aeronautic labs into a web-based
 simulation. The submodules of this lab allow the user to practice procedures
 with industrial machinery, perform experiments, and observe virtual data
 readouts. While I was responsible for most of the implementation, the amazing
-[Kenny Park](https://parkkennypark.com) helped me with finishing this
-application off (especially lab 6) and adding lots of polish. Overall, we're
-really happy with this lab turned out!
+Kenny Park helped me with finishing this application off (especially lab 6) and
+adding lots of polish. Overall, we're really happy with this lab turned out!
 
 ### [Chicken Digestion Game](https://ansc.purdue.edu/poultryeducation)
 
@@ -82,7 +79,7 @@ and know the event system just a bit better 😃.
 {{< image classes="fancybox" src="/images/posts/envision/turkey.png" title="Turkey Animal Welfare Screenshot" >}}
 
 An educational experience created for [Dr. Marisa
-Erasmus](https://ag.purdue.edu/ansc/Pages/profile.aspx?strAlias=merasmus)
+Erasmus](https://ag.purdue.edu/ansc/erasmus/)
 presenting a short instructional narrative illustrating differences in animal
 welfare on turkey farms. Since this narrative project was shorter in scope and
 similar to "Pollinator - Visit to the Royal Palace," I was able to reuse a lot
@@ -91,7 +88,7 @@ in this
 [article](https://ag.purdue.edu/stories/students-are-gobbling-up-this-simulation/)
 written by Emma Ea Ambrose!
 
-### [Pollinator Dissection](https://extension.entm.purdue.edu/POL_Virt_Learn/dissection.html)
+### Pollinator Dissection
 
 {{< image classes="fancybox" src="/images/posts/envision/dissection.png" title="Pollinator Dissection Screenshot" >}}
 
@@ -105,7 +102,9 @@ proof-of-concept to the fully-featured application you can view today. The large
 number of dissection specimens meant that this project required heavy
 collaboration with artists as well. Ultimately, Pollinator Dissection was a
 great starting project and the heavy asset involvement helped me hit the ground
-running with all of the fantastic personnel at the Envision Center.
+running with all of the fantastic personnel at the Envision Center. You can
+[read more about it at this article
+here](https://www.itap.purdue.edu/newsroom/2020/200602_PollinatorProtection.html).
 
 ### [Subsurface Tile Drainage](https://envision-public-builds.s3.amazonaws.com/TileDrainage/index.html)
 
@@ -122,7 +121,7 @@ product that you can see today. With some of Drew's mind-bending Houdini magic,
 we were able to procedurally generate the field and animations, and package them
 in a compatible format for a lightweight and accessible online release.
 
-### [Pollinator Matching Game](https://extension.entm.purdue.edu/POL_Virt_Learn/dissection.html)
+### Pollinator Matching Game
 
 {{< image classes="fancybox" src="/images/posts/envision/matching.png" title="Pollinator Matching Game Screenshot" >}}
 
@@ -133,7 +132,7 @@ the backend logic was already completed, however, more work on the UI and polish
 was still needed. Ultimately, I helped implement a more responsive UI design and
 ensured a smooth and successful deployment.
 
-### [Pollinator - Visit to the Royal Palace](https://dev.extension.entm.purdue.edu/POL_Virt_Learn/royal_palace.html)
+### Pollinator - Visit to the Royal Palace
 
 {{< image classes="fancybox" src="/images/posts/envision/royal.png" title="Pollinator - Visit to the Royal Palace Screenshot" >}}
 
@@ -143,6 +142,8 @@ concept was passed on to me, but it was clear that the inherent complexity of
 the branching narration required a much more powerful and flexible system. I
 helped to create a custom, serializable dialog system capable of complex
 narrative workflows while still allowing for flexible modifications, as well.
+You can [read more about it at this article
+here](https://www.itap.purdue.edu/newsroom/2020/200602_PollinatorProtection.html).
 
 ### [College of Engineering - Hydraulics Virtual Labs](https://envision-public-builds.s3.amazonaws.com/HydroLab/index.html)
 
@@ -166,11 +167,7 @@ scratch and ended up contributing to roughly half of the final product.
 
 ### Collab VR
 
-<iframe width="100%" height="450"
-  src="https://www.youtube.com/embed/pM5M2ByEW-w"
-  frameborder="0" allowfullscreen
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
-</iframe>
+{{< youtube tmctoL42eQY >}}
 
 An exciting project to build a comprehensive, multiplayer virtual-reality
 learning platform for dynamic and immersive media in a classroom setting! From
