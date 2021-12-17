@@ -408,6 +408,14 @@ you can use the Wakatime extension with instead. You can even expose Prometheus
 metrics to feed your wakatime data into Grafana with [this
 dashboard](https://grafana.com/grafana/dashboards/12790)!
 
+# Home Assistant
+
+[Home Assistant](https://www.home-assistant.io/) is a modern home automation
+manager that has support for almost every device under the sun. It's super
+customizable, and I've been able to completely automate my apartment's comings
+and goings just from my phone's position in my pocket! If you have an interest
+in home automation, Home Assistant easily takes the cake.
+
 # Conclusion
 
 Well, I hope that you've found something that can really enjoy from the list
