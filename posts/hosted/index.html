@@ -1,0 +1,444 @@
+<!doctype html><html lang=en-us>
+<head>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Self-hosted","datePublished":"2020-12-08T00:00:00-06:00","dateModified":"2020-12-08T00:00:00-06:00","author":{"@type":"Person","name":"Olivia Sculley","image":"https://olivia.sculley.dev/images/headshot.jpg"},"mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/olivia.sculley.dev\/posts\/hosted\/"},"publisher":{"@type":"Organization","name":"Olivia Sculley","logo":{"@type":"ImageObject","url":"https://olivia.sculley.dev/images/headshot.jpg"}},"description":"I like to say that a home server is a bit like the techie\u0026rsquo;s project car. It might not work perfectly 100% of the time, and it might be a bit louder and take up more space in your garage, closet, or living room (if you\u0026rsquo;re like me) than your significant other might hope, but there\u0026rsquo;s nothing more rewarding than getting to take it out for a spin at the end of the day.","keywords":[]}</script>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Hugo 0.90.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name=author content="Olivia Sculley">
+<meta name=keywords content>
+<meta name=description content="a short post about Olivia's homelab">
+<meta property="og:description" content="a short post about Olivia's homelab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Self-hosted">
+<meta name=twitter:title content="Self-hosted">
+<meta property="og:url" content="https://olivia.sculley.dev/posts/hosted/">
+<meta property="twitter:url" content="https://olivia.sculley.dev/posts/hosted/">
+<meta property="og:site_name" content="Olivia Sculley">
+<meta property="og:description" content="a short post about Olivia's homelab">
+<meta name=twitter:description content="a short post about Olivia's homelab">
+<meta property="og:locale" content="en-us">
+<meta property="article:published_time" content="2020-12-08T00:00:00">
+<meta property="article:modified_time" content="2020-12-08T00:00:00">
+<meta property="article:section" content="software">
+<meta name=twitter:card content="summary">
+<meta property="og:image" content="https://olivia.sculley.dev/images/headshot.jpg">
+<meta property="twitter:image" content="https://olivia.sculley.dev/images/headshot.jpg">
+<meta property="og:image" content="https://olivia.sculley.dev/images/posts/hosted/grafana.png">
+<meta property="twitter:image" content="https://olivia.sculley.dev/images/posts/hosted/grafana.png">
+<meta property="og:image" content="https://olivia.sculley.dev/images/posts/hosted/status-page.png">
+<meta property="twitter:image" content="https://olivia.sculley.dev/images/posts/hosted/status-page.png">
+<meta property="og:image" content="https://olivia.sculley.dev/images/posts/hosted/nginx.png">
+<meta property="twitter:image" content="https://olivia.sculley.dev/images/posts/hosted/nginx.png">
+<meta property="og:image" content="https://olivia.sculley.dev/images/posts/hosted/nginx-grafana.png">
+<meta property="twitter:image" content="https://olivia.sculley.dev/images/posts/hosted/nginx-grafana.png">
+<title>Self-hosted</title>
+<link rel=icon href=https://olivia.sculley.dev/favicon.png>
+<link rel=canonical href=https://olivia.sculley.dev/posts/hosted/>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
+<link rel=stylesheet href=https://olivia.sculley.dev/css/style-yvgmlz5e9hd5lcqz9mv3fbe24n5lirmunrwhq23xtaaybuxlenahok7yhk8c.min.css>
+<link rel=stylesheet href=https://olivia.sculley.dev/css/style.css>
+</head>
+<body>
+<div id=blog>
+<header id=header data-behavior=5>
+<i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
+<div class=header-title>
+<a class=header-title-link href=https://olivia.sculley.dev/ aria-label="Go to homepage">Olivia Sculley</a>
+</div>
+<a class=header-right-picture href=https://olivia.sculley.dev/#about aria-label="Open the link: /#about">
+<img class=header-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
+</a>
+</header>
+<nav id=sidebar data-behavior=5>
+<div class=sidebar-container>
+<div class=sidebar-profile>
+<a href=https://olivia.sculley.dev/#about aria-label="Read more about the author">
+<img class=sidebar-profile-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
+</a>
+<h4 class=sidebar-profile-name>Olivia Sculley</h4>
+<h5 class=sidebar-profile-bio><p>Fullstack Web Developer, former VR/Game Dev</p>
+<p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p>
+<p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p>
+</h5>
+</div>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/ title=Home>
+<i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
+<span class=sidebar-button-desc>Home</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/categories title=Categories>
+<i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
+<span class=sidebar-button-desc>Categories</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/tags title=Tags>
+<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
+<span class=sidebar-button-desc>Tags</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/archives title=Archives>
+<i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden=true></i>
+<span class=sidebar-button-desc>Archives</span>
+</a>
+</li>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/#about title=About>
+<i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden=true></i>
+<span class=sidebar-button-desc>About</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://github.com/oliviasculley target=_blank rel=noopener title=GitHub>
+<i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
+<span class=sidebar-button-desc>GitHub</span>
+</a>
+</li>
+</ul>
+<ul class=sidebar-buttons>
+<li class=sidebar-button>
+<a class=sidebar-button-link href=https://olivia.sculley.dev/index.xml title=RSS>
+<i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden=true></i>
+<span class=sidebar-button-desc>RSS</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id=main data-behavior=5 class=hasCoverMetaIn>
+<article class=post id=top>
+<div class="post-header main-content-wrap text-left">
+<h1 class=post-title>
+Self-hosted
+</h1>
+<div class="postShorten-meta post-meta">
+<time datetime=2020-12-08T00:00:00-06:00>
+December 8, 2020
+</time>
+<span>in</span>
+<a class=category-link href=https://olivia.sculley.dev/categories/software>software</a>
+</div>
+</div>
+<div class="post-content markdown">
+<div class=main-content-wrap>
+<p>I like to say that a home server is a bit like the techie&rsquo;s project car. It
+might not work perfectly 100% of the time, and it might be a bit louder and take
+up more space in your garage, closet, or living room (if you&rsquo;re like me) than
+your significant other might hope, but there&rsquo;s nothing more rewarding than
+getting to take it out for a spin at the end of the day.</p>
+<h1 id=table-of-contents>Table of Contents</h1>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#why-not>Why Not</a></li>
+<li><a href=#why>Why</a></li>
+<li><a href=#the-setuphttpswwwyoutubecomwatchvoyhddncbbfy><a href="https://www.youtube.com/watch?v=OyHddNCbBfY">The Setup</a></a>
+<ul>
+<li><a href=#hardware>Hardware</a></li>
+<li><a href=#nginx>Nginx</a></li>
+<li><a href=#dynamic-dns>Dynamic DNS</a></li>
+<li><a href=#docker>Docker</a></li>
+<li><a href=#zfs>ZFS</a></li>
+<li><a href=#monitoring>Monitoring</a>
+<ul>
+<li><a href=#configs>Configs</a></li>
+<li><a href=#dashboards>Dashboards</a></li>
+</ul>
+</li>
+<li><a href=#uptime>Uptime</a></li>
+<li><a href=#backups>Backups</a></li>
+</ul>
+</li>
+<li><a href=#conclusion>Conclusion</a></li>
+<li><a href=#photos>Photos</a></li>
+</ul>
+</nav>
+<h1 id=why-not>Why Not</h1>
+<p>First, devil&rsquo;s advocate. There can definitely be a few perfectly downsides to
+hosting your own stuff. Evaluate some of them based on your own circumstances,
+in no particular order:</p>
+<ul>
+<li>Can definitely eat up a fair amount of time</li>
+<li>Each service will require some amount of ongoing maintenance</li>
+<li>Might require networking shenanigans or might not even be possible if your ISP
+puts you behind a NAT or some other weird network routing</li>
+<li>Requires money to buy hardware (although this is definitely scalable to your
+aspirations)</li>
+</ul>
+<h1 id=why>Why</h1>
+<p>However, I self host in spite of these for several reasons:</p>
+<ol>
+<li><strong>Data:</strong> The foremost reason I self host is to protect my data. With open
+source software and your own instances, you can be reasonably sure that your
+information is staying with you.</li>
+<li><strong>Independence:</strong> When you self-host, you can reduce your reliance on third
+party companies who might data-mine, sell your data, run proprietary
+software, or promote damaging business practices.</li>
+<li><strong>Tech:</strong> Self-hosting can expose you to interesting new technologies,
+protocols, platforms and best practices that can help you improve your
+technological literacy, even if you aren&rsquo;t a developer. Some of these have
+included Docker, Grafana, Prometheus, Minio, ZFS, IPFS, Gemini and more.</li>
+<li><strong>Cool Software:</strong> A lot of cool software is being produced for self-hosters.
+Whether it&rsquo;s being able to fully automate your home with <a href=https://www.home-assistant.io/>Home
+Assistant</a>, or planning out your weekday
+meals with <a href=https://hay-kot.github.io/mealie/>Mealie</a>, there&rsquo;s a ton of cool
+software that&rsquo;s available for people who host their own services. There&rsquo;s
+already a fantastic <a href=https://github.com/awesome-selfhosted/awesome-selfhosted>list of awesome self-hosted
+services</a> with a
+really fitting name, so I&rsquo;ll just link that here. If any of these services
+seem interesting to you, I&rsquo;d really encourage you to get a self hosted setup
+so that you can easily add or remove services whenever you want!</li>
+</ol>
+<h1 id=the-setuphttpswwwyoutubecomwatchvoyhddncbbfy><a href="https://www.youtube.com/watch?v=OyHddNCbBfY">The Setup</a></h1>
+<p>Everyone&rsquo;s self-hosting setup will be different due to personal preferences and
+infrastructure needs, so I&rsquo;ll stick to giving a quick overview of my setup and
+why I chose to use the services I did. My personal benchmark was ease of use,
+since I knew I wanted to host a lot of services and I wanted to spend as little
+time as possible doing system administration. I&rsquo;m really happy how my setup
+turned out, since I&rsquo;m hosting an obscene number of services but I&rsquo;m firmly
+convinced that administration couldn&rsquo;t have gone smoother.</p>
+<h2 id=hardware>Hardware</h2>
+<p>Hardware-wise, I am just using my old gaming pc I built back in high school, and
+used the chance to upgrade to a really compact mini-ITX build :D. As a normal
+full-size ATX system, it fits really well in my <a href=https://www.supermicro.com/products/chassis/4U/745/SC745TQ-700.cfm>Supermicro
+745</a> case I
+bought off of someone in a local Linux user&rsquo;s group. I removed the CD drive and
+added a random 5x3.5 HDD hot swap caddy, so with the 8 Supermicro hot bays in
+the front, it comes up to 13 hot swap bays without even having to expand into a
+DAS! My CPU cooler just barely fits into the aforementioned 4U rackmount, which
+I have in a <a href=https://www.amazon.com/12U-4-Post-Open-Rack/dp/B0037ECAJA/>12U StarTech
+rack</a> I got off
+Amazon. I am planning on putting <a href=https://www.amazon.com/dp/B002MZTTTY/>this really nice walnut
+countertop</a> on top which should turn it
+into a really nice looking nightstandy thing. I just leave it next to my
+computer in my living room 😎👍.</p>
+<h2 id=nginx>Nginx</h2>
+<p>First, I have nginx running as an overarching reverse proxy to 50+ subdomains
+and counting. While you could do all of this manually, I&rsquo;ve really enjoyed using
+<a href=https://nginxproxymanager.com>Nginx Proxy Manager</a> to manage my subdomains for
+me. With NPM, you can spin up a subdomain with caching, websocket-compatibility,
+blocking common exploits, and with fancy features like HSTS (if your domain
+doesn&rsquo;t enforce it already), HTTP/2, and more. NPM takes care of registering and
+renewing domains with certbot automatically, so you don&rsquo;t even have to lift a
+finger to get an automatic setup. You can always add custom elements to any part
+of the final config through the config and even in parts of the UI, so rest
+assured it&rsquo;s easy to customize NPM to your ideal setup.</p>
+<h2 id=dynamic-dns>Dynamic DNS</h2>
+<p>Since you&rsquo;ll most likely be hosting on a home internet line without a permanent
+external IP address, your IP address could change at any time. Hopefully you
+aren&rsquo;t behind a NAT, but you&rsquo;ll still need to make sure your domain name is
+pointed at your external IP address. I personally use <a href="https://support.google.com/domains/answer/6147083?hl=en#zippy=%2Cset-up-a-client-program-on-your-gateway-host-or-server">ddclient with Google
+Domains</a>,
+which supports ddclient with minimal config, like so:</p>
+<pre tabindex=0><code>ssl=yes
+protocol=googledomains
+login=generated_username
+password=generated_password
+coolwebsite.tld
+</code></pre><p>Pretty easy, huh?</p>
+<h2 id=docker>Docker</h2>
+<p>Docker is by far the biggest piece of the puzzle, helping host anywhere from
+80-90 containers. Hosting that many different pieces of software on one machine
+would&rsquo;ve been improbable for one person, but with modern containerization, it&rsquo;s
+become a breeze. I keep all the configs as <code>docker-compose.yml</code> files in their
+own directories, and starting or stopping a service is as easy as
+<code>docker-compose up -d</code> or <code>docker-compose down</code> in each directory.</p>
+<p>In addition, Docker also handles it&rsquo;s own networking. By creating on Docker
+network, you can refer to containers directly by their container name. In NPM,
+this makes reverse proxying very clear and explicit with addresses like
+<code>http://grafana:3000</code>.</p>
+<p>While competiting solutions like Podman or LXC seem like promising more
+lightweight alternatives, Docker is definitely pretty touch and go, and I&rsquo;ve
+been really happy with the ecosystem.</p>
+<h2 id=zfs>ZFS</h2>
+<p>I use ZFS to ensure my data is stored redundantly, but there are lots of other
+perks as well. Expansion is effortless when you can just add more drives to the
+arrays, but I&rsquo;ve also split out <a href=https://jrs-s.net/2019/04/03/on-zfs-recordsize/>datasets based on their
+usage</a>, with most files on
+SSDs, and large content files on WD Reds. While I haven&rsquo;t used too many other
+features like snapshots, it&rsquo;s reassuring to have access to powerful ZFS features
+and the wider ecosystem for a solution that&rsquo;s guaranteed to be scalable.</p>
+<h2 id=monitoring>Monitoring</h2>
+<p>I use <a href=https://grafana.com/>Grafana</a> and <a href=https://prometheus.io/>Prometheus</a>
+to help monitor my services. Grafana has a billion dashboards for pretty much
+anything you could want (I even use Grafana to <a href=https://olivia.sculley.dev/posts/free-software/#wakatime--wakapi>graph my productivity in VS
+Code</a>). However, here are my configs and
+the main dashboards that I use.</p>
+<h3 id=configs>Configs</h3>
+<ul>
+<li><a href=https://olivia.sculley.dev/assets/grafana-docker-compose.yml>docker-compose.yml</a></li>
+<li><a href=https://olivia.sculley.dev/assets/node_exporter_recording_rules.yml>node_exporter_recording_rules.yml</a></li>
+<li><a href=https://olivia.sculley.dev/assets/prometheus.yml>prometheus.yml</a></li>
+</ul>
+<h3 id=dashboards>Dashboards</h3>
+<ul>
+<li><a href=https://grafana.com/grafana/dashboards/893>Docker</a></li>
+<li><a href=https://github.com/nginxinc/nginx-prometheus-exporter/blob/master/grafana/README.md>Nginx</a></li>
+<li><a href=https://grafana.com/grafana/dashboards/11337>ZFS</a></li>
+</ul>
+<h2 id=uptime>Uptime</h2>
+<p>I use <a href=https://uptimerobot.com/>UptimeRobot</a> to help monitor the uptime of my
+services. Their free plan allows up to 50 free monitors and allows you to
+generate a status page, which is definitely good enough for me.</p>
+<h2 id=backups>Backups</h2>
+<p>While I do have versioned backups thanks to
+<a href=https://olivia.sculley.dev/posts/free-software/#rsync--rsnapshot>rsnapshot</a>, I don&rsquo;t have them encrypted and going off site at this point. However, hopefully I&rsquo;ll get around to this soon!</p>
+<h1 id=conclusion>Conclusion</h1>
+<p>Since I&rsquo;ve embarked on this self-hosted journey, I&rsquo;ve managed to become much
+more familiar with monitoring and hosting technologies that as a generic
+developer, I could&rsquo;ve easily never encountered. However, I am the most grateful
+to my server for allowing me and my friends to move away from centralized big
+tech, and instead towards some awesome open source projects that I now can&rsquo;t
+imagine living without. While it might not be practical to expect everyone to
+self-host all of their own services, for those with the know-how, it can be
+incredibly rewarding to not just provide these services for yourself, but to
+your friends and family as well.</p>
+<h1 id=photos>Photos</h1>
+<div class=image-gallery>
+<div class=image-gallery-metabar>
+<span>Gallery 4 images</span>
+</div>
+<div class="image-gallery-photos image-gallery-photos--thumbnail">
+<div class=photo-box>
+<a class="photo-box-inner fancybox" data-fancybox=gallery-77acfef5e8d247806407a1aa2adc2017 data-caption="The docker dashboard with a few tweaks" title="The docker dashboard with a few tweaks" href=https://olivia.sculley.dev/images/posts/hosted/grafana.png aria-label="Zoom in on the picture">
+<img class=photo src=https://olivia.sculley.dev/images/posts/hosted/grafana.png>
+</a>
+</div>
+<div class=photo-box>
+<a class="photo-box-inner fancybox" data-fancybox=gallery-77acfef5e8d247806407a1aa2adc2017 data-caption="you know your self-hosting hobby is a bit out of control when your status page has two pages..." title="you know your self-hosting hobby is a bit out of control when your status page has two pages..." href=https://olivia.sculley.dev/images/posts/hosted/status-page.png aria-label="Zoom in on the picture">
+<img class=photo src=https://olivia.sculley.dev/images/posts/hosted/status-page.png>
+</a>
+</div>
+<div class=photo-box>
+<a class="photo-box-inner fancybox" data-fancybox=gallery-77acfef5e8d247806407a1aa2adc2017 data-caption="look at all those hosts" title="look at all those hosts" href=https://olivia.sculley.dev/images/posts/hosted/nginx.png aria-label="Zoom in on the picture">
+<img class=photo src=https://olivia.sculley.dev/images/posts/hosted/nginx.png>
+</a>
+</div>
+<div class=photo-box>
+<a class="photo-box-inner fancybox" data-fancybox=gallery-77acfef5e8d247806407a1aa2adc2017 data-caption="grafana dashboards are so pretty" title="grafana dashboards are so pretty" href=https://olivia.sculley.dev/images/posts/hosted/nginx-grafana.png aria-label="Zoom in on the picture">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id=post-footer class="post-footer main-content-wrap">
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--disabled">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://olivia.sculley.dev/posts/portfolio/ data-tooltip=Portfolio aria-label="PREVIOUS: Portfolio">
+<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</article>
+<footer id=footer class=main-content-wrap>
+<span class=copyrights>
+&copy; 2021 Olivia Sculley. All Rights Reserved
+</span>
+</footer>
+</div>
+<div id=bottom-bar class=post-bottom-bar data-behavior=5>
+<div class=post-actions-wrap>
+<nav>
+<ul class="post-actions post-action-nav">
+<li class=post-action>
+<a class="post-action-btn btn btn--disabled">
+<i class="fa fa-angle-left"></i>
+<span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default tooltip--top" href=https://olivia.sculley.dev/posts/portfolio/ data-tooltip=Portfolio aria-label="PREVIOUS: Portfolio">
+<span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+<i class="fa fa-angle-right"></i>
+</a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+<li class="post-action hide-lg hide-md hide-sm">
+<a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
+<i class="fa fa-share-alt" aria-hidden=true></i>
+</a>
+</li>
+<li class=post-action>
+<a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
+<i class="fa fa-arrow-up" aria-hidden=true></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id=about>
+<div id=about-card>
+<div id=about-btn-close>
+<i class="fa fa-times"></i>
+</div>
+<img id=about-card-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
+<h4 id=about-card-name>Olivia Sculley</h4>
+<div id=about-card-bio><p>Fullstack Web Developer, former VR/Game Dev</p>
+<p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p>
+<p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p>
+</div>
+<div id=about-card-job>
+<i class="fa fa-briefcase"></i>
+<br>
+Simply Binary
+</div>
+<div id=about-card-location>
+<i class="fa fa-map-marker-alt"></i>
+<br>
+Greenville, SC
+</div>
+</div>
+</div>
+<div id=cover style=background-image:url(https://olivia.sculley.dev/images/bg.jpg)></div>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+<script src=https://olivia.sculley.dev/js/script-lnbtiib5cndftopapzpioittsduby2tjmrlkjdyjmnzo7foqi4sdmxrthy.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-gE8KAQyFIzV1C9+GZ8TKJHZS2s+n7EjNtC+IMRn1l5+WYJTHOODUM6JSjZhFhqXmc7bG8Av6XXpckA4tYhflnw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/apache.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-EWROca+bote+7Oaaar1F6y74iZj1r1F9rm/ly7o+/FwJopbBaWtsFDmaKoZDd3QiGU2pGacBirHJNivmGLYrow==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/go.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-GDVzAn0wpx1yVtQsRWmFc6PhJiLBPdUic+h4GWgljBh904O3JU10fk9EKNpVyIoPqkFn54rgL2QBG4BmUTMpiQ==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/http.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-UgZlma8NzkrDb/NWgmLIcTrH7i/CSnLLDRFqCSNF5NGPpjKmzyM25qcoXGOup8+cDakKyaiTDd7N4dyH4YT+IA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/less.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-lot9koe73sfXIrUvIPM/UEhuMciN56RPyBdOyZgfO53P2lkWyyXN7J+njcxIIBRV+nVDQeiWtiXg+bLAJZDTfg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/nginx.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-Zd3e7XxHP00TD0Imr0PIfeM0fl0v95kMWuhyAS3Wn1UTSXTkz0OhtRgBAr4JlmADRgiXr4x7lpeUdqaGN8xIog==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/puppet.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-qtqDO052iXMSP+5d/aE/jMtL9vIIGvONgTJziC2K/ZIB1yEGa55WVxGE9/08rSQ62EoDifS9SWVGZ7ihSLhzMA==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/scss.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
+<script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
+</body>
+</html>
