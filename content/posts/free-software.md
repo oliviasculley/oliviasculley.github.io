@@ -14,9 +14,9 @@ the best free software projects that I have found, which I either use on a daily
 basis or have made me say "how did I possibly live before this?". Hopefully
 you'll be able to discover a project that'll make you feel the same, too!
 
-## The List™
+{{< toc >}}
 
-### Syncthing
+# Syncthing
 
 [Syncthing](https://syncthing.net/) is one of my favorite open-source projects
 right now and one I use on a daily basis. It syncs files between all of my
@@ -25,19 +25,17 @@ stored on the cloud (read: someone else's computer). Its easy-to-use and highly
 customizable network-baed UI is also extremely convenient. I'd highly recommend
 it to anyone needing to transfer files or replace Box/Dropbox/Drive, etc.
 
-### Music Player Daemon
+# Music Player Daemon
 
 [MPD](https://www.musicpd.org/) and its associated ecosystem is my go-to way to
 enjoy music. I adore the server-client model that MPD uses, which lets me easily
 use any frontend to browse and control my entire music library. Currently, I use
 [cantata](https://github.com/CDrummond/cantata) on desktop, which has a ton of
-handy features and is super user friendly. [mpd
-scribble](https://github.com/MusicPlayerDaemon/mpdscribble) (sic) is also handy
-to scrobble any tracks played with mpd to [last.fm](https://last.fm). Setting up
-MPD on a central server allows multiple people to run clients and control a
-singular MPD instance that could be hooked up to, say, a home audio system.
+handy features and is super user friendly. Setting up MPD on a central server
+allows multiple people to run clients and control a singular MPD instance that
+could be hooked up to, say, a home audio system.
 
-### KDEConnect
+# KDEConnect
 
 [KDEConnect](https://community.kde.org/KDEConnect) provides fantastic
 integration of your mobile device with a Linux computer. While it's natively a
@@ -50,62 +48,85 @@ more, all connected through an encrypted connection. While its connections are
 restricted to local networks only, with a home OpenVPN server it shouldn't be an
 issue.
 
-### MPV
+# MPV
 
 [MPV](https://mpv.io/) is a great minimalist vide player, with a fantastic
 ecosystem of addons and plugins. I use
 [mpv-mpris](https://github.com/hoyon/mpv-mpris) to enable MPRIS controls on my
 GNOME desktop.
 
-### GDM
+# GDM
 
 The [Gnome Desktop Manager](https://www.gnome.org/) is a great desktop
 environment with lots of features. In addition, it's [huge library of
 extensions](https://extensions.gnome.org) can provide almost any modification
-that you could want.
+that you could want. However, I've since moved to i3/sway for a more minimal
+desktop environment.
 
-#### Extensions
+## Extensions
 
-- [user-themes](https://extensions.gnome.org/extension/19/user-themes/)
-- [wallpaper-changer](https://extensions.gnome.org/extension/1225/wallpaper-changer/)
-- [window-is-ready-notification-remover](https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/)
-- [windownavigator](https://extensions.gnome.org/extension/10/windownavigator/)
-- [workspace-scroll](https://extensions.gnome.org/extension/943/workspace-scroll/)
-- [bluetooth-quick-connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
-- [caffeine](https://extensions.gnome.org/extension/517/caffeine/)
-- [cpu-power-manager](https://extensions.gnome.org/extension/945/cpu-power-manager/)
-- [dash-to-dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
-- [disconnect-wifi](https://extensions.gnome.org/extension/904/disconnect-wifi/)
-- [freon](https://extensions.gnome.org/extension/841/freon/)
-- [gsconnect](https://extensions.gnome.org/extension/1319/gsconnect/)
-- [gtile](https://extensions.gnome.org/extension/28/gtile/)
-- [jackvolume](https://extensions.gnome.org/extension/1135/jackvolume/)
-- [keyboard-battery](https://extensions.gnome.org/extension/2170/keyboard-battery/)
-- [appindicator-support](https://extensions.gnome.org/extension/615/appindicator-support/)
-- [openweather](https://extensions.gnome.org/extension/750/openweather/)
-- [panel-osd](https://extensions.gnome.org/extension/708/panel-osd/)
-- [refresh-wifi-connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
-- [removable-drive-menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
-- [screenshot-window-sizer](https://extensions.gnome.org/extension/881/screenshot-window-sizer/)
-- [sound-output-device-chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
-- [topicons](https://extensions.gnome.org/extension/1031/topicons/)
+- [User Themes](https://extensions.gnome.org/extension/19/user-themes/)
+- [Wallpaper Changer](https://extensions.gnome.org/extension/1225/wallpaper-changer/)
+- [Window Is Ready - Notification Remover](https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover/)
+- [windowNavigator](https://extensions.gnome.org/extension/10/windownavigator/)
+- [Workspace Scroll](https://extensions.gnome.org/extension/943/workspace-scroll/)
+- [Bluetooth Quick Connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
+- [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+- [CPU Power Manager](https://extensions.gnome.org/extension/945/cpu-power-manager/)
+- [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+- [Disconnect Wifi](https://extensions.gnome.org/extension/904/disconnect-wifi/)
+- [Freon](https://extensions.gnome.org/extension/841/freon/)
+- [GSConnect](https://extensions.gnome.org/extension/1319/gsconnect/)
+- [gTile](https://extensions.gnome.org/extension/28/gtile/)
+- [JackVolume](https://extensions.gnome.org/extension/1135/jackvolume/)
+- [Keyboard battery](https://extensions.gnome.org/extension/2170/keyboard-battery/)
+- [AppIndicator and KStatusNotifierItem Support](https://extensions.gnome.org/extension/615/appindicator-support/)
+- [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
+- [Panel OSD](https://extensions.gnome.org/extension/708/panel-osd/)
+- [Refresh Wifi Connections](https://extensions.gnome.org/extension/905/refresh-wifi-connections/)
+- [Removable Drive Menu](https://extensions.gnome.org/extension/7/removable-drive-menu/)
+- [Screenshot Window Sizer](https://extensions.gnome.org/extension/881/screenshot-window-sizer/)
+- [Sound Input & Output Device Chooser](https://extensions.gnome.org/extension/906/sound-output-device-chooser/)
+- [TopIcons Plus](https://extensions.gnome.org/extension/1031/topicons/)
 
-### Arch Linux
+# i3 / sway
+
+i3 is a minimalist tiling window manager that allows you to greatly customize
+your desktop environment with keybinds. I find that it really makes it easy to
+move between different windows, and makes me more productive. The configuration
+relies on an intimate knowledge of command line and command line tools which may
+seem more difficult, but allow you to really customize your desktop experience.
+sway works exactly the same as i3, but is written to use Wayland instead of X.
+
+## Addons
+
+- [Waybar](https://github.com/Alexays/Waybar)
+- [swaylock](https://github.com/swaywm/swaylock)
+- [swayidle](https://github.com/swaywm/swayidle)
+- [rofi](https://github.com/davatorium/rofi)
+- [mako](https://github.com/emersion/mako)
+- [playerctl](https://github.com/altdesktop/playerctl)
+- [kanshi](https://sr.ht/~emersion/kanshi/)
+- [slurp](https://github.com/emersion/slurp)
+- [wf-recorder](https://github.com/ammen99/wf-recorder)
+- [grim](https://github.com/emersion/grim)
+
+# Arch Linux
 
 I use [Arch](https://www.archlinux.org/) for my operating system. Among all the
-distros that can be considered minimalist, Arch Linux is very popular and in
-my experience, [just tends to
-work](https://blog.codinghorror.com/content/images/uploads/2007/03/6a0120a85dcdae970b0128776ff992970c-pi.png),
-albeit after a non-significant amount of configuration time. Its modularity and
-emphasis on "working beneath the hood" are the main reasons why my computer
-literacy is where it is now. As a result of bootstrapping it from nearly
-scratch, I've become extremely comfortable with essential system administration
-tools and learned so much more about how computers actually work than anything I
-could learn in a class. I highly recommend Arch to anyone who doesn't just want
-a great operating system, but also desires to truly know their computer from the
+distros that can be considered minimalist, Arch Linux is very popular and in my
+experience, [just tends to
+work](/images/posts/software/works-on-my-machine.png), albeit after a
+non-significant amount of configuration time. Its modularity and emphasis on
+"working beneath the hood" are the main reasons why my computer literacy is
+where it is now. As a result of bootstrapping it from nearly scratch, I've
+become extremely comfortable with essential system administration tools and
+learned so much more about how computers actually work than anything I could
+learn in a class. I highly recommend Arch to anyone who doesn't just want a
+great operating system, but also desires to truly know their computer from the
 ground up.
 
-### Firefox
+# Firefox
 
 I use [Firefox](https://www.mozilla.org/en-US/firefox/new/) for my web browser
 for several reasons. Mozilla's commitment to open-source software and privacy
@@ -115,7 +136,7 @@ which is all but a killer feature in my mind. This allows each tab to be
 isolated from cookies and other tracking features, as well as switching between
 multiple accounts super easily.
 
-#### Extensions
+## Extensions
 
 - [Dark Reader](https://addons.mozilla.org/en-US/firefox/addon/darkreader/)
 - [GSConnect](https://addons.mozilla.org/en-US/firefox/addon/gsconnect/?src=search)
@@ -151,7 +172,7 @@ multiple accounts super easily.
   - [Tab Unloader for TST](https://addons.mozilla.org/en-US/firefox/addon/tab-unload-for-tree-style-tab/)
   - [Bookmark Tree for TST](https://addons.mozilla.org/en-US/firefox/addon/bookmark-tree-for-tst/)
 
-### youtube-dl
+# youtube-dl
 
 I use the incredibly comprehensive [youtube-dl](https://youtube-dl.org/) for
 downloading media from almost any website that hosts it, and its amount of
@@ -159,7 +180,7 @@ customizability is unprecedented. Youtube-dl also integrates very nicely with
 [ffmpeg](https://ffmpeg.org) to convert files into almost any format imaginable
 with just one extra argument.
 
-### Lutris
+# Lutris
 
 [Lutris](https://lutris.net/) allows you to effortlessly run your games with
 [Wine](https://www.winehq.org/) and Valve's
@@ -167,13 +188,13 @@ with just one extra argument.
 a great UI with impressive amounts of customization (even better than winecfg in
 my opinion!).
 
-### Quassel
+# Quassel
 
 [Quassel](https://quassel-irc.org/) is a great IRC client that utilizes a
 server/client model, as well as allowing for extensive themeing and
 customization. What more could you need?
 
-### Trackma (Linux) / Taiga (Windows)
+# Trackma (Linux) / Taiga (Windows)
 
 One of the rare Windows-only programs here, [Taiga](https://taiga.moe/) is
 absolutely fantastic for keeping track of your consumption of Japanese media.
@@ -184,29 +205,28 @@ worked fantastically, but I have personally yet to get Trackma's feature to
 work. However, it is still extremely convenient in order to update and keep
 track of all your media.
 
-### Anki
+# Anki
 
 [Anki](https://apps.ankiweb.net/) is an incredibly solid flashcard program that
 adjusts to your knowledge level to help you learn as effectively as possible. I
 use it to improve my 中文 vocab, and the AnkiWeb platform allows you to
 effectively sync your sets to all your devices, and even your phone!
 
-### Keepass XC
+# Keepass XC
 
 [Keepass XC](https://keepassxc.org/) securely stores all of your passwords.
 Combined with the browser extension, it can also prefill form data for websites
 and even fill in simple HTTP authentication, which is also super useful.
 
-### Deluge
+# Deluge
 
-I used to use [qBittorrent](https://qbittorrent.org), but recently I'm trying
-out [Deluge](https://deluge-torrent.org/), and I'm really liking it so far,
-especially with the client/server architecture. It meets the perfect balance of
-efficiency and handy features, like labels for easy sorting, that put it above
-other good choices such as [Transmission](https://transmissionbt.com/) or
+[Deluge](https://deluge-torrent.org/) is a torrent client that uses a
+client/server architecture. It meets the perfect balance of efficiency and handy
+features, like labels for easy sorting, that put it above other good choices
+such as [Transmission](https://transmissionbt.com/) or
 [rTorrent](https://github.com/rakshasa/rtorrent) for me personally.
 
-### Nginx
+# Nginx
 
 Did you know its pronounced "engine-ex", and not "en-jinx"? I won't say how long
 it took me until I realized. Anyways, [nginx](https://nginx.org) is a great
@@ -215,39 +235,47 @@ Combined with
 [nginx-fancy-index](https://github.com/Naereen/Nginx-Fancyindex-Theme), nginx
 works great as a super-lightweight fileshare as well.
 
-### rsync / rsnapshot
+# rsync / rsnapshot
 
-[Rsync](https://linux.die.net/man/1/rsync) is the swiss army knife of getting
+[rsync](https://linux.die.net/man/1/rsync) is the swiss army knife of getting
 files from point a to point b, and can be pretty easily dropped in to replace
 `cp`, if you wanted. However, as the -sync suffix implies, rsync really shines
 when syncing files across folders, file systems, and even completely different
 machines with ssh. rsync will hash your files block by block, allowing you to
-skip redundant file transfers. I used to have a custom backup script to use
-rsync, but I've recently discovered [rsnapshot](https://rsnapshot.org/), which
-builds off of rsync to create the ultimate backup system. Making use of good use
-of hardlinks to save disk space, rsnapshot can create efficient snapshots every
-month, week, day and hour. If you're using Arch, the [Arch
+skip redundant file transfers.
+
+I used to have a custom backup script to use rsync, but I've recently discovered
+[rsnapshot](https://rsnapshot.org/), which builds off of rsync to create the
+ultimate backup system. Making use of good use of hardlinks to save disk space,
+rsnapshot can create efficient snapshots every month, week, day and hour. If
+you're using Arch, the [Arch
 Wiki](https://wiki.archlinux.org/index.php/Rsnapshot) makes editing the config
 file and setting up the systemd timers a breeze. I've found that rsnapshot makes
 it super easy to create versioned, efficient backups.
 
-### Jekyll/Hugo
+# Jekyll / Hugo
 
 [Jekyll](https://jekyllrb.com/) and [Hugo](https://gohugo.io/) are very similar
 to each other, both being very easy and intuitive to use, with the biggest
-hurdle typically getting them installed properly. For me, site generators strike
+hurdle typically getting them installed properly.
+
+For me, site generators strike
 the perfect balance between manually creating HTML files and using monolith or
 proprietary platforms like Wordpress, while still being powerful, accessible and
-open-source. While there are many other non-federated platforms that I could
-have used instead of Hugo that would probably have worked just as well at
-hosting and sharing the content I'm putting here, there's just something special
-when you are in full control of the product from the raw words in the beginning
-to the final HTML files being served in the end. Setting up a simple generated
-website/blog is a fun project that I'd recommend to anyone who doesn't have a
-blog platform already or isn't satisfied with their current workflow, and also
-has an added bonus of having a nice product at the end.
+open-source.
 
-### Wireguard
+While there are many other platforms that I could have used instead
+of Hugo that would probably have worked just as well at hosting and sharing the
+content I'm putting here, there's just something special when you are in full
+control of the product from the raw words in the beginning to the final HTML
+files being served in the end.
+
+Setting up a simple generated website/blog is a fun project that I'd recommend
+to anyone who doesn't have a blog platform already or isn't satisfied with their
+current workflow, and also has an added bonus of having a nice product at the
+end.
+
+# Wireguard
 
 [Wireguard](https://wireguard.com/) is my recommended way of setting up a home
 VPN connection. It takes a bit of legwork at the beginning to generate all the
@@ -262,7 +290,7 @@ wifi connections); instead, you'll need to install and open
 Just a note that the default Arch package doesn't come with a `.desktop` file
 for you, either (although that's pretty easy to fix for yourself).
 
-### Calibre
+# Calibre
 
 [Calibre](https://calibre-ebook.com/) is hands-down the absolute best way to
 manage your ebook collection. No matter how you source them, Calibre supports a
@@ -275,7 +303,7 @@ aspect of the UI and download new icon packs from within the default settings
 panel! If you want to get into reading books digitally, Calibre is absolutely
 essential.
 
-### Koreader
+# Koreader
 
 Another e-reader tool that I can't recommend enough,
 [Koreader](https://koreader.rocks) is also an amazing open source offering,
@@ -290,7 +318,7 @@ built-in SSH server (!!!). Koreader was easy to install on my Kobo with the
 and I know that I'll be very satisfied with this e-reading experience for years
 to come.
 
-#### E-reader sidenote
+## E-reader sidenote
 
 Seriously, if you've never tried reading on an e-ink screen, go down to your
 local bookstore and try it out. It also has the added bonus of being able to
@@ -308,15 +336,81 @@ and `nodiratime`, which will break the "sort by last read" setting for Koreader
 `relatime` if you can. The mounting script is in `/etc/init.d/rcS`, where you
 will need to modify the above accordingly.
 
-## Conclusion
+# Tiny Tiny RSS
+
+[Tiny Tiny RSS](https://tt-rss.org/) is a GPLv3 rss reader that is self-hosted.
+Personally, i've found that it's one of the most easy-to-use and feature-rich
+rss readers out there. While it needs to be self-hosted, it fully supports the
+greader API so that most mobile rss clients can sync with ttrss, keeping all of
+your feeds up to date even on the go.
+
+# Mumble
+
+[Mumble](https://www.mumble.info) is a free, open source voice chat application
+that's super lightweight and secure. I use it to chat or game with my friends,
+and the desktop and mobile clients work really well. There's even a
+self-hostable [web client under
+development](https://github.com/Johni0702/mumble-web)!
+
+# Searx
+
+[Searx](https://searx.github.io/searx/) is a self-hostable metasearch engine
+that aggregates results from a wide variety of search engines and services. With
+Searx, your searches will be protected from tracking and profiling, only
+returning you with the results that you need. Since it implements the
+[OpenSearch](https://developer.mozilla.org/en-US/docs/Web/OpenSearch) format,
+you can even add it easily to most major browsers!
+
+# Revolt
+
+[Revolt](https://revolt.chat/) is an upcoming chat application that takes heavy
+inspiration from Discord in it's design, but under the hood it's 100% completely
+free software. It seems like a fantastic alternative to Discord or Slack, and
+I'm excited to see it's future development!
+
+# ArchiveBox
+
+[ArchiveBox](https://archivebox.io/) is a self-hostable website archiver that
+can make copies of websites or media that you might want to save later on. Think
+of it like a personal [Wayback Machine](https://web.archive.org/).
+
+# Mealie
+
+[Mealie](https://hay-kot.github.io/mealie/) is a self-hostable recipe planner
+that doesn't just let you save recipes for future use, but also plan out your
+mealplan for the week! Mealie's parser works on pretty much every recipe I've
+come across, getting rid of the super long paragraphs of junk and trimming down
+the recipes just to their steps.
+
+# N.eko
+
+[N.eko](https://github.com/m1k1o/neko) is a self-hosted virtual browser that is
+very similar to the now defunct rabb.it website. You and your friends can join a
+n.eko instance and browse to any website like Youtube and begin watching videos
+in perfect sync. Anyone can grab control and visit another website, letting you
+and your friends have the perfect virtual party!
+
+# Jellyfin
+
+[Jellyfin](https://jellyfin.org) is a self-hosted, open source media server much
+like Plex. I like using Jellyfin to view my media since it's fully open source
+and has lots of cool features like sync play that make watching your digital
+media library a joy. There are great mobile apps for Android to stream your
+media library on the go, as well.
+
+# Wakatime / Wakapi
+
+[Wakatime](https://wakatime.com) is a productivity-tracking application that
+hooks into Visual Studio Code and relays your activity to their servers. While
+this service and the extension might be proprietary, there are open-source
+compatible backend services like [Wakapi](https://github.com/muety/wakapi) that
+you can use the Wakatime extension with instead. You can even expose Prometheus
+metrics to feed your wakatime data into Grafana with [this
+dashboard](https://grafana.com/grafana/dashboards/12790)!
+
+# Conclusion
 
 Well, I hope that you've found something that can really enjoy from the list
 above. Got any more that you think I'd like to try out? Feel free to send them
 to [olivia@sculley.dev](mailto:olivia@sculley.dev) and I'll be more than
 happy to take a look!
-
-<!--
-Code blocks
-{% highlight shell %}
-{% endhighlight %}
--->
