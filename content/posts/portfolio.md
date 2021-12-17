@@ -16,7 +16,7 @@ as time goes on. In addition, you can find [my resume here](/resume.pdf).
 At the [Jun Laboratory](https://web.ics.purdue.edu/~jun25/index.html), I had the
 opportunity to build a "virtual twin" of the lab's current robotic setup in VR.
 Along the way, I had the opportunity to expand the virtual twin into a more
-ambitious project, [NERVV](https://gitlab.com/oliviasculley/nervv): an open-source,
+ambitious project, [NERVV](https://github.com/oliviasculley/nervv): an open-source,
 easily-integratable C# framework to visualize and control material-production
 pipelines in virtual reality with Unity 3D and ROS. In addition, I was also able
 to create a toolkit of novel, VR-based interaction techniques that can be
@@ -49,7 +49,7 @@ The Purdue Envision Center is part of [Purdue's](https://www.purdue.edu/)
 virtual simulation, multimedia production and data visualization services to
 faculty and industry clients alike. While at the Envision Center, I was able to
 work on a number of projects with some amazing coworkers, which I've listed in
-[this post here]({% post_url 2019-08-08-envision %}). Most of these projects are
+[this post here](/posts/envision). Most of these projects are
 open-source and able to be run in a browser, so I'd highly encourage you to
 check them out!
 
@@ -74,7 +74,7 @@ At the [Purdue Chopralab](http://www.chopralab.com/), I mainly worked on the
 mobile version of [MINT](https://chopralab.github.io/MINT/index.html), which
 visualizes and manipulates protein ligands. As a result, I second-authored a
 research publication which is [available on
-ChemRxiv](https://chemrxiv.org/s/de3acf1e4d7f20b0bd7e). I also helped design a
+ChemRxiv](https://doi.org/10.26434/chemrxiv.9889994.v1). I also helped design a
 minimalist and responsive lab website with a news feature using Jekyll, and
 created the MINT website linked above.
 
