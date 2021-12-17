@@ -1,0 +1,21 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+
+  external_labels:
+    monitor: 'grafana'
+
+rule_files:
+  - "node_exporter_recording_rules.yml"
+
+scrape_configs:
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana-prometheus:9090','grafana-cadvisor:8080','grafana-node-exporter:9100','grafana-nginx:9113']
+  # If you have wakapi setup
+  # - job_name: 'wakapi'
+  #   scrape_interval: 1m
+  #   metrics_path: '/api/metrics'
+  #   bearer_token: 'echo apitoken | base64'
+  #   static_configs:
+  #     - targets: ['wakapi:3000']
