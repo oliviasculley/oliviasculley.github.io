@@ -10,7 +10,7 @@ type: posts
 As you might know, I'm an avid [free software
 advocate](https://www.gnu.org/philosophy/free-sw.en.html), and I try to use free
 software over proprietary ones as much as I reasonably can. These are some of
-the best free software projects that I have found, which I either use on a daily
+the free software projects that I have found, which I either use on a daily
 basis or have made me say "how did I possibly live before this?". Hopefully
 you'll be able to discover a project that'll make you feel the same, too!
 
@@ -22,8 +22,11 @@ you'll be able to discover a project that'll make you feel the same, too!
 right now and one I use on a daily basis. It syncs files between all of my
 devices, all through encrypted connections and with no need for my files to be
 stored on the cloud (read: someone else's computer). Its easy-to-use and highly
-customizable network-baed UI is also extremely convenient. I'd highly recommend
-it to anyone needing to transfer files or replace Box/Dropbox/Drive, etc.
+customizable network-based UI is also extremely convenient. However, there is
+still a great client for Android as well. I use it to sync files between all my
+devices including my phone, and I'd highly recommend it to anyone needing to
+transfer files on any sort of regular basis or replace Box/Dropbox/Google Drive,
+etc.
 
 # Music Player Daemon
 
@@ -39,19 +42,19 @@ could be hooked up to, say, a home audio system.
 
 [KDEConnect](https://community.kde.org/KDEConnect) provides fantastic
 integration of your mobile device with a Linux computer. While it's natively a
-KDE application, I use it through my GNOME desktop through a handy [gnome
+KDE application, I used to use it with GNOME desktop through a handy [gnome
 extension](https://extensions.gnome.org/extension/1319/gsconnect/). In addition
 to MPRIS controls, GSConnect provides direct PulseAudio volume modification, as
 well as a bunch of other handy features like remote mouse/keyboard input, remote
 command execution, file transfers, 2-way notification syncing, SMS messaging and
 more, all connected through an encrypted connection. While its connections are
-restricted to local networks only, with a home OpenVPN server it shouldn't be an
+restricted to local networks only, with a home VPN server it shouldn't be an
 issue.
 
 # MPV
 
-[MPV](https://mpv.io/) is a great minimalist vide player, with a fantastic
-ecosystem of addons and plugins. I use
+[MPV](https://mpv.io/) is a great minimalist video player, with a fantastic
+ecosystem of addons and plugins. I used to use
 [mpv-mpris](https://github.com/hoyon/mpv-mpris) to enable MPRIS controls on my
 GNOME desktop.
 
@@ -103,8 +106,13 @@ sway works exactly the same as i3, but is written to use Wayland instead of X.
 - [Waybar](https://github.com/Alexays/Waybar)
 - [swaylock](https://github.com/swaywm/swaylock)
 - [swayidle](https://github.com/swaywm/swayidle)
+- [alacritty](https://github.com/alacritty/alacritty)
 - [rofi](https://github.com/davatorium/rofi)
 - [mako](https://github.com/emersion/mako)
+- [gnome-polkit](https://guix.gnu.org/packages/polkit-gnome-0.105/)
+- [nm-applet](https://gitlab.gnome.org/GNOME/network-manager-applet)
+- [blueman](https://github.com/blueman-project/blueman)
+- [ibus](https://github.com/ibus/ibus)
 - [playerctl](https://github.com/altdesktop/playerctl)
 - [kanshi](https://sr.ht/~emersion/kanshi/)
 - [slurp](https://github.com/emersion/slurp)
@@ -119,12 +127,11 @@ experience, [just tends to
 work](/images/posts/software/works-on-my-machine.png), albeit after a
 non-significant amount of configuration time. Its modularity and emphasis on
 "working beneath the hood" are the main reasons why my computer literacy is
-where it is now. As a result of bootstrapping it from nearly scratch, I've
-become extremely comfortable with essential system administration tools and
-learned so much more about how computers actually work than anything I could
-learn in a class. I highly recommend Arch to anyone who doesn't just want a
-great operating system, but also desires to truly know their computer from the
-ground up.
+where it is now. As a result of bootstrapping it from scratch, I've become
+extremely comfortable with essential system administration tools and learned so
+much more about how computers actually work than anything I could learn in a
+class. I highly recommend Arch to anyone who doesn't just want a great operating
+system, but also desires to truly know their computer from the ground up.
 
 # Firefox
 
@@ -231,9 +238,6 @@ such as [Transmission](https://transmissionbt.com/) or
 Did you know its pronounced "engine-ex", and not "en-jinx"? I won't say how long
 it took me until I realized. Anyways, [nginx](https://nginx.org) is a great
 open-source hosting proxy server, and it is infinitely better than Apache.
-Combined with
-[nginx-fancy-index](https://github.com/Naereen/Nginx-Fancyindex-Theme), nginx
-works great as a super-lightweight fileshare as well.
 
 # rsync / rsnapshot
 
@@ -259,16 +263,14 @@ it super easy to create versioned, efficient backups.
 to each other, both being very easy and intuitive to use, with the biggest
 hurdle typically getting them installed properly.
 
-For me, site generators strike
-the perfect balance between manually creating HTML files and using monolith or
-proprietary platforms like Wordpress, while still being powerful, accessible and
-open-source.
+For me, site generators strike the perfect balance between manually creating
+HTML files and using monolith or proprietary platforms like Wordpress, while
+still being powerful, accessible and open-source.
 
-While there are many other platforms that I could have used instead
-of Hugo that would probably have worked just as well at hosting and sharing the
-content I'm putting here, there's just something special when you are in full
-control of the product from the raw words in the beginning to the final HTML
-files being served in the end.
+While there are many other platforms that I could have used instead of Hugo that
+would probably have worked just as well at hosting and sharing this content,
+there's just something special when you are in full control of the product from
+the raw words in the beginning to the final HTML files being served in the end.
 
 Setting up a simple generated website/blog is a fun project that I'd recommend
 to anyone who doesn't have a blog platform already or isn't satisfied with their
@@ -336,13 +338,13 @@ and `nodiratime`, which will break the "sort by last read" setting for Koreader
 `relatime` if you can. The mounting script is in `/etc/init.d/rcS`, where you
 will need to modify the above accordingly.
 
-# Tiny Tiny RSS
+# FreshRSS
 
-[Tiny Tiny RSS](https://tt-rss.org/) is a GPLv3 rss reader that is self-hosted.
+[FreshRSS](https://freshrss.org) is an AGPL rss reader that is self-hosted.
 Personally, i've found that it's one of the most easy-to-use and feature-rich
 rss readers out there. While it needs to be self-hosted, it fully supports the
-greader API so that most mobile rss clients can sync with ttrss, keeping all of
-your feeds up to date even on the go.
+greader API so that most mobile rss clients can sync with FreshRSS, keeping all
+of your feeds up to date even on the go.
 
 # Mumble
 
@@ -420,5 +422,5 @@ in home automation, Home Assistant easily takes the cake.
 
 Well, I hope that you've found something that can really enjoy from the list
 above. Got any more that you think I'd like to try out? Feel free to send them
-to [olivia@sculley.dev](mailto:olivia@sculley.dev) and I'll be more than
-happy to take a look!
+to [olivia@sculley.dev](mailto:olivia@sculley.dev) and I'll be more than happy
+to take a look!
