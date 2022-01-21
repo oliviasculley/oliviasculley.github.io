@@ -135,14 +135,10 @@ beefy servers.</p>
 <h1 id=table-of-contents>Table of Contents</h1>
 <nav id=TableOfContents>
 <ul>
-<li>
-<ul>
 <li><a href=#requirements>Requirements</a></li>
 <li><a href=#installation>Installation</a></li>
 <li><a href=#quirks>Quirks</a></li>
 <li><a href=#conclusion>Conclusion</a></li>
-</ul>
-</li>
 <li><a href=#configuration>Configuration</a>
 <ul>
 <li><a href=#dockerfile><code>Dockerfile</code></a></li>
@@ -152,7 +148,7 @@ beefy servers.</p>
 </li>
 </ul>
 </nav>
-<h2 id=requirements>Requirements</h2>
+<h1 id=requirements>Requirements</h1>
 <p>Now, you&rsquo;ll need a couple of items before you can use this super handy service:</p>
 <ul>
 <li>A reverse proxy (I recommend Nginx, but there&rsquo;s also Apache)</li>
@@ -184,7 +180,7 @@ instance for my applications. I also use the super handy <a href=https://github.
 manager</a> to manage binaries for all my
 languages, but that installs to your home path so there&rsquo;s no need to add it to
 the Docker image.</p>
-<h2 id=installation>Installation</h2>
+<h1 id=installation>Installation</h1>
 <p>First, you&rsquo;ll need to install <a href=https://docs.docker.com/compose/install>Docker
 Compose</a>, on your machine. Next, Copy
 the <code>Dockerfile</code>, <code>docker-compose.yml</code> and <code>.dockerignore</code> files to a directory
@@ -213,7 +209,7 @@ configuration, set up <code>nginx.conf</code> in your directory now.</p>
 build and run the services in the background. If you run this in the background,
 you can use <code>docker-compose logs</code> to view the standard output from the services
 or <code>docker-compose logs -f</code> to follow along.</p>
-<h2 id=quirks>Quirks</h2>
+<h1 id=quirks>Quirks</h1>
 <p>This setup actually has a few quirks, but luckily I&rsquo;ve discovered them for you!</p>
 <ul>
 <li>The <code>linuxserver/code-server</code> image&rsquo;s home actually isn&rsquo;t <code>/home</code> like you&rsquo;d
@@ -249,7 +245,7 @@ There&rsquo;s also <a href=https://github.com/microsoft/vscode-dev-containers/tr
 Docker</a>
 if you really need it and you&rsquo;ve seen <em>Inception</em> too many times.</li>
 </ul>
-<h2 id=conclusion>Conclusion</h2>
+<h1 id=conclusion>Conclusion</h1>
 <p>I&rsquo;ve been using this setup for a few months now, and while it required some
 setup, I&rsquo;ve really enjoyed daily driving it. If you spot any issues with this
 post, feel free to let me know at
