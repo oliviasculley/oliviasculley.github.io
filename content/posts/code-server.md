@@ -1,6 +1,6 @@
 ---
 title: "Code Server"
-description: "Setting up code-server for Elixir/Phoenix and more"
+description: "Setting up code-server for remote development"
 date: 2022-01-20T00:00:00-05:00
 categories: ["software"]
 type: posts
@@ -15,11 +15,13 @@ different devices or operating systems and pick up right where you left off?
 If you guessed it, this coding environment already exists from
 [code-server](https://docs.linuxserver.io/images/docker-code-server), which lets
 you run VS Code on a remote server, accessible through the browser! No longer
-will you forget to push your work or deal with troublesome merge commits due to
+will you forget to push your work, deal with troublesome merge commits due to
 changes on different devices, or feel the lag as your laptop struggles to run
-beefy debug servers.
+beefy servers.
 
-## Requirements
+{{< toc >}}
+
+# Requirements
 Now, you'll need a couple of items before you can use this super handy service:
 - A reverse proxy (I recommend Nginx, but there's also Apache)
 - An externally available server or instance to run this on
@@ -49,7 +51,7 @@ manager](https://github.com/asdf-vm/asdf) to manage binaries for all my
 languages, but that installs to your home path so there's no need to add it to
 the Docker image.
 
-## Installation
+# Installation
 
 First, you'll need to install [Docker
 Compose](https://docs.docker.com/compose/install), on your machine. Next, Copy
@@ -85,7 +87,7 @@ build and run the services in the background. If you run this in the background,
 you can use `docker-compose logs` to view the standard output from the services
 or `docker-compose logs -f` to follow along.
 
-## Quirks
+# Quirks
 
 This setup actually has a few quirks, but luckily I've discovered them for you!
 
@@ -122,7 +124,7 @@ This setup actually has a few quirks, but luckily I've discovered them for you!
   Docker](https://github.com/microsoft/vscode-dev-containers/tree/main/containers/docker-in-docker)
   if you really need it and you've seen *Inception* too many times.
 
-## Conclusion
+# Conclusion
 I've been using this setup for a few months now, and while it required some
 setup, I've really enjoyed daily driving it. If you spot any issues with this
 post, feel free to let me know at
