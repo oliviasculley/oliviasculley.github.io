@@ -1,5 +1,5 @@
 ---
-title:  "Envision Center projects"
+title: "Envision Center projects"
 description: "Projects by Olivia Sculley"
 date: 2019-08-08T00:00:00-06:00
 categories: ["portfolio"]

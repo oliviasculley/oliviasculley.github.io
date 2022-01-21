@@ -1,5 +1,5 @@
 ---
-title:  "Self-hosted"
+title: "Self-hosted"
 description: "a short post about Olivia's homelab"
 date: 2021-12-08T00:00:00-06:00
 gallery:
