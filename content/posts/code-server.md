@@ -103,13 +103,14 @@ This setup actually has a few quirks, but luckily I've discovered them for you!
   using Microsoft's extension marketplace, `code-server` is [unable to use the
   official VS Code extensions
   market](https://coder.com/docs/code-server/latest/FAQ#why-cant-code-server-use-microsofts-extension-marketplace)
-  with `code-server` 😱😱😱. Luckily, you can still use the [Open VSX
+  😱😱😱. Luckily, you can still use the [Open VSX
   Registry](https://open-vsx.org/) which contains most of the open-source
   extensions. I've found that Open VSX contains all the extensions that I use,
-  but you can still [install extensions manually](https://coder.com/docs/code-server/latest/FAQ#how-do-i-install-an-extension-manually) if it's not available. The
-  `SERVICE_URL` and `ITEM_URL` environment variables in `docker-compose.yml` are
-  already set up to use the Open VSX registry, so you should be good to go
-  there.
+  but you can still [install extensions
+  manually](https://coder.com/docs/code-server/latest/FAQ#how-do-i-install-an-extension-manually)
+  if it's not available. The `SERVICE_URL` and `ITEM_URL` environment variables
+  in `docker-compose.yml` are already set up to use the Open VSX registry, so
+  you should be good to go there.
 - By default, the `code-server` image isn't able to access your host machine's
   SSH agent. I use Arch Linux, so I've added the `SSH_AUTH_SOCK` environment
   variable to point to the SSH agent at `/run/ssh-agent.socket`, but if your
