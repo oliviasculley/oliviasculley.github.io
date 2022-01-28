@@ -4,7 +4,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.0 with theme Tranquilpeak 0.5.3-BETA">
+<meta name=generator content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
 <meta name=author content="Olivia Sculley">
 <meta name=keywords content>
 <meta name=description content="Setting up code-server for remote development">
@@ -224,13 +224,14 @@ folder you created, but you can also use a different path, or remove the
 using Microsoft&rsquo;s extension marketplace, <code>code-server</code> is <a href=https://coder.com/docs/code-server/latest/FAQ#why-cant-code-server-use-microsofts-extension-marketplace>unable to use the
 official VS Code extensions
 market</a>
-with <code>code-server</code> 😱😱😱. Luckily, you can still use the <a href=https://open-vsx.org/>Open VSX
+😱😱😱. Luckily, you can still use the <a href=https://open-vsx.org/>Open VSX
 Registry</a> which contains most of the open-source
 extensions. I&rsquo;ve found that Open VSX contains all the extensions that I use,
-but you can still <a href=https://coder.com/docs/code-server/latest/FAQ#how-do-i-install-an-extension-manually>install extensions manually</a> if it&rsquo;s not available. The
-<code>SERVICE_URL</code> and <code>ITEM_URL</code> environment variables in <code>docker-compose.yml</code> are
-already set up to use the Open VSX registry, so you should be good to go
-there.</li>
+but you can still <a href=https://coder.com/docs/code-server/latest/FAQ#how-do-i-install-an-extension-manually>install extensions
+manually</a>
+if it&rsquo;s not available. The <code>SERVICE_URL</code> and <code>ITEM_URL</code> environment variables
+in <code>docker-compose.yml</code> are already set up to use the Open VSX registry, so
+you should be good to go there.</li>
 <li>By default, the <code>code-server</code> image isn&rsquo;t able to access your host machine&rsquo;s
 SSH agent. I use Arch Linux, so I&rsquo;ve added the <code>SSH_AUTH_SOCK</code> environment
 variable to point to the SSH agent at <code>/run/ssh-agent.socket</code>, but if your
