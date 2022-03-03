@@ -4,7 +4,7 @@
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta http-equiv=x-ua-compatible content="IE=edge">
-<meta name=generator content="Hugo 0.92.1 with theme Tranquilpeak 0.5.3-BETA">
+<meta name=generator content="Hugo 0.93.1 with theme Tranquilpeak 0.5.3-BETA">
 <meta name=author content="Olivia Sculley">
 <meta name=keywords content>
 <meta name=description content="Setting up code-server for remote development">
@@ -24,135 +24,88 @@
 <meta name=twitter:card content="summary">
 <meta property="og:image" content="https://olivia.sculley.dev/images/headshot.jpg">
 <meta property="twitter:image" content="https://olivia.sculley.dev/images/headshot.jpg">
-<title>Code Server</title>
-<link rel=icon href=https://olivia.sculley.dev/favicon.png>
+<title>Code Server</title><link rel=icon href=https://olivia.sculley.dev/favicon.png>
 <link rel=canonical href=https://olivia.sculley.dev/posts/code-server/>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin=anonymous referrerpolicy=no-referrer>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==" crossorigin=anonymous referrerpolicy=no-referrer>
 <link rel=stylesheet href=https://olivia.sculley.dev/css/style-trp9jrduohktlma3qmy1qx4ijo1alywvrrrtxpbsbctecgkb9l9np8xlceub.min.css>
 <link rel=stylesheet href=https://olivia.sculley.dev/css/style.css>
-</head>
-<body>
+</head><body>
 <div id=blog>
 <header id=header data-behavior=5>
 <i id=btn-open-sidebar class="fa fa-lg fa-bars"></i>
 <div class=header-title>
 <a class=header-title-link href=https://olivia.sculley.dev/ aria-label="Go to homepage">Olivia Sculley</a>
-</div>
-<a class=header-right-picture href=https://olivia.sculley.dev/#about aria-label="Open the link: /#about">
+</div><a class=header-right-picture href=https://olivia.sculley.dev/#about aria-label="Open the link: /#about">
 <img class=header-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
 </a>
-</header>
-<nav id=sidebar data-behavior=5>
+</header><nav id=sidebar data-behavior=5>
 <div class=sidebar-container>
 <div class=sidebar-profile>
 <a href=https://olivia.sculley.dev/#about aria-label="Read more about the author">
 <img class=sidebar-profile-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
 </a>
-<h4 class=sidebar-profile-name>Olivia Sculley</h4>
-<h5 class=sidebar-profile-bio><p>Fullstack Web Developer, former VR/Game Dev</p>
-<p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p>
-<p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p>
-</h5>
-</div>
-<ul class=sidebar-buttons>
+<h4 class=sidebar-profile-name>Olivia Sculley</h4><h5 class=sidebar-profile-bio><p>Fullstack Web Developer, former VR/Game Dev</p><p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p><p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p></h5></div><ul class=sidebar-buttons>
 <li class=sidebar-button>
 <a class=sidebar-button-link href=https://olivia.sculley.dev/ title=Home>
 <i class="sidebar-button-icon fas fa-lg fa-home" aria-hidden=true></i>
 <span class=sidebar-button-desc>Home</span>
 </a>
-</li>
-<li class=sidebar-button>
+</li><li class=sidebar-button>
 <a class=sidebar-button-link href=https://olivia.sculley.dev/categories title=Categories>
 <i class="sidebar-button-icon fas fa-lg fa-bookmark" aria-hidden=true></i>
 <span class=sidebar-button-desc>Categories</span>
 </a>
-</li>
-<li class=sidebar-button>
-<a class=sidebar-button-link href=https://olivia.sculley.dev/tags title=Tags>
-<i class="sidebar-button-icon fas fa-lg fa-tags" aria-hidden=true></i>
-<span class=sidebar-button-desc>Tags</span>
-</a>
-</li>
-<li class=sidebar-button>
+</li><li class=sidebar-button>
 <a class=sidebar-button-link href=https://olivia.sculley.dev/archives title=Archives>
 <i class="sidebar-button-icon fas fa-lg fa-archive" aria-hidden=true></i>
 <span class=sidebar-button-desc>Archives</span>
 </a>
-</li>
-<li class=sidebar-button>
+</li><li class=sidebar-button>
 <a class=sidebar-button-link href=https://olivia.sculley.dev/#about title=About>
 <i class="sidebar-button-icon fas fa-lg fa-question" aria-hidden=true></i>
 <span class=sidebar-button-desc>About</span>
 </a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
+</li></ul><ul class=sidebar-buttons>
 <li class=sidebar-button>
 <a class=sidebar-button-link href=https://github.com/oliviasculley target=_blank rel=noopener title=GitHub>
 <i class="sidebar-button-icon fab fa-lg fa-github" aria-hidden=true></i>
 <span class=sidebar-button-desc>GitHub</span>
 </a>
-</li>
-</ul>
-<ul class=sidebar-buttons>
+</li></ul><ul class=sidebar-buttons>
 <li class=sidebar-button>
 <a class=sidebar-button-link href=https://olivia.sculley.dev/index.xml title=RSS>
 <i class="sidebar-button-icon fas fa-lg fa-rss" aria-hidden=true></i>
 <span class=sidebar-button-desc>RSS</span>
 </a>
-</li>
-</ul>
-</div>
-</nav>
-<div id=main data-behavior=5 class=hasCoverMetaIn>
+</li></ul></div></nav><div id=main data-behavior=5 class=hasCoverMetaIn>
 <article class=post id=top>
 <div class="post-header main-content-wrap text-left">
 <h1 class=post-title>
 Code Server
-</h1>
-<div class="postShorten-meta post-meta">
+</h1><div class="postShorten-meta post-meta">
 <time datetime=2022-01-20T00:00:00-05:00>
 January 20, 2022
 </time>
 <span>in</span>
 <a class=category-link href=https://olivia.sculley.dev/categories/software>software</a>
-</div>
-</div>
-<div class="post-content markdown">
+</div></div><div class="post-content markdown">
 <div class=main-content-wrap>
 <p>So, imagine if there was a portable, convenient way to do software development
 from any of your web-capable devices, but also leverage the power of beefier
 machines to compile and run heavier applications? What if this coding
 environment was reproducible and allowed you to seemlessly switch between
-different devices or operating systems and pick up right where you left off?</p>
-<p>If you guessed it, this coding environment already exists from
+different devices or operating systems and pick up right where you left off?</p><p>If you guessed it, this coding environment already exists from
 <a href=https://docs.linuxserver.io/images/docker-code-server>code-server</a>, which lets
 you run VS Code on a remote server, accessible through the browser! No longer
 will you forget to push your work, deal with troublesome merge commits due to
 changes on different devices, or feel the lag as your laptop struggles to run
-beefy servers.</p>
-<h1 id=table-of-contents>Table of Contents</h1>
-<nav id=TableOfContents>
+beefy servers.</p><h1 id=table-of-contents>Table of Contents</h1><nav id=TableOfContents>
 <ul>
-<li><a href=#requirements>Requirements</a></li>
-<li><a href=#installation>Installation</a></li>
-<li><a href=#quirks>Quirks</a></li>
-<li><a href=#conclusion>Conclusion</a></li>
-<li><a href=#configuration>Configuration</a>
+<li><a href=#requirements>Requirements</a></li><li><a href=#installation>Installation</a></li><li><a href=#quirks>Quirks</a></li><li><a href=#conclusion>Conclusion</a></li><li><a href=#configuration>Configuration</a>
 <ul>
-<li><a href=#dockerfile><code>Dockerfile</code></a></li>
-<li><a href=#docker-compose><code>Docker Compose</code></a></li>
-<li><a href=#dockerignore><code>.dockerignore</code></a></li>
-</ul>
-</li>
-</ul>
-</nav>
-<h1 id=requirements>Requirements</h1>
-<p>Now, you&rsquo;ll need a couple of items before you can use this super handy service:</p>
-<ul>
-<li>A reverse proxy (I recommend Nginx, but there&rsquo;s also Apache)</li>
-<li>An externally available server or instance to run this on
+<li><a href=#dockerfile><code>Dockerfile</code></a></li><li><a href=#docker-compose><code>Docker Compose</code></a></li><li><a href=#dockerignore><code>.dockerignore</code></a></li></ul></li></ul></nav><h1 id=requirements>Requirements</h1><p>Now, you&rsquo;ll need a couple of items before you can use this super handy service:</p><ul>
+<li>A reverse proxy (I recommend Nginx, but there&rsquo;s also Apache)</li><li>An externally available server or instance to run this on
 <ul>
 <li>If you don&rsquo;t have a spare computer or server lying around, don&rsquo;t worry!
 There are tons of super cheap VPS services where you can get access to
@@ -160,16 +113,11 @@ datacenter speeds at low prices! I&rsquo;m not sponsored by OVH and I don&rsquo;
 them anymore, but I think the <a href=https://us.ovhcloud.com/vps/uc-vps-sandbox/>$3.50/month starter
 instance</a> is probably the
 cheapest deal that I know of. If you find this isn&rsquo;t enough power, you can
-easily upgrade to a beefier instance or another service.</li>
-</ul>
-</li>
-</ul>
-<p>There are lots of guides on how to set up a reverse proxy like <a href=https://www.domysee.com/blogposts/reverse-proxy-nginx-docker-compose>this
+easily upgrade to a beefier instance or another service.</li></ul></li></ul><p>There are lots of guides on how to set up a reverse proxy like <a href=https://www.domysee.com/blogposts/reverse-proxy-nginx-docker-compose>this
 one</a> that
 can help you with this, so won&rsquo;t cover that here. Personally, I use <a href=https://nginxproxymanager.com>Nginx
 Proxy Manager</a> to do my proxying, and I talk
-about that more in <a href=https://olivia.sculley.dev/posts/hosted>another blog post here</a>.</p>
-<p>Now, since you probably have your own languages and tools for development,
+about that more in <a href=https://olivia.sculley.dev/posts/hosted>another blog post here</a>.</p><p>Now, since you probably have your own languages and tools for development,
 you&rsquo;ll have to extend the <code>linuxserver/code-server</code> Docker image to include
 those. But don&rsquo;t fret, it&rsquo;s super easy! Since I mostly code in Elixir with
 Phoenix, Hugo for this blog or Python, I&rsquo;ve included them here for reference.
@@ -179,39 +127,30 @@ server</a> for regular HTML websites and
 instance for my applications. I also use the super handy <a href=https://github.com/asdf-vm/asdf>asdf version
 manager</a> to manage binaries for all my
 languages, but that installs to your home path so there&rsquo;s no need to add it to
-the Docker image.</p>
-<h1 id=installation>Installation</h1>
-<p>First, you&rsquo;ll need to install <a href=https://docs.docker.com/compose/install>Docker
+the Docker image.</p><h1 id=installation>Installation</h1><p>First, you&rsquo;ll need to install <a href=https://docs.docker.com/compose/install>Docker
 Compose</a>, on your machine. Next, Copy
 the <code>Dockerfile</code>, <code>docker-compose.yml</code> and <code>.dockerignore</code> files to a directory
 on your server. The <code>Dockerfile</code> contains the steps to create your own custom
 Docker image, and the <code>docker-compose.yml</code> contains your runtime configuration
 settings. <code>.dockerignore</code> will keep other files out of your Docker image and
-make sure it&rsquo;s as small as possible.</p>
-<p>Now, you&rsquo;ll want to tweak the <code>Dockerfile</code> to install the languages and
+make sure it&rsquo;s as small as possible.</p><p>Now, you&rsquo;ll want to tweak the <code>Dockerfile</code> to install the languages and
 dependencies that you need for your own development. The
 <code>linuxserver/code-server</code> image uses Ubuntu as a base, so you&rsquo;ll need to copy
 any install commands after <code>RUN</code>, and you can use my <code>Dockerfile</code> as a
-reference.</p>
-<p>You&rsquo;ll also need to set up the bind mounts that will connect the <code>/config</code> and
+reference.</p><p>You&rsquo;ll also need to set up the bind mounts that will connect the <code>/config</code> and
 <code>/home</code> directories to folders on your host machine. My config below just puts
 them in the same folder, so simply run <code>mkdir data config postgres</code> in the same
 folder. You&rsquo;ll also need to make sure they have the correct permissions by
 running <code>chown 1000:1000 -R data/ config/</code>, since the <code>docker-compose.yml</code> I
 have runs the containers with the user and group <code>1000</code>. If this doesn&rsquo;t exist
 on your machine, you can change it to the UID and GUID for your own user and
-group, or make a new one if you&rsquo;d like.</p>
-<p>You&rsquo;ll also need to run <code>chown 999:999 -R postgres</code> for PostgreSQL. If you have
+group, or make a new one if you&rsquo;d like.</p><p>You&rsquo;ll also need to run <code>chown 999:999 -R postgres</code> for PostgreSQL. If you have
 another database, you&rsquo;ll need to adjust the folders and <code>docker-compose.yml</code> for
 the image that you&rsquo;ll be using. If you&rsquo;re going to use a stock Nginx
-configuration, set up <code>nginx.conf</code> in your directory now.</p>
-<p>Finally, to run your server, all you need to do is do <code>docker-compose up --build</code> to build and run your services or <code>docker-compose up -d --build</code> to
+configuration, set up <code>nginx.conf</code> in your directory now.</p><p>Finally, to run your server, all you need to do is do <code>docker-compose up --build</code> to build and run your services or <code>docker-compose up -d --build</code> to
 build and run the services in the background. If you run this in the background,
 you can use <code>docker-compose logs</code> to view the standard output from the services
-or <code>docker-compose logs -f</code> to follow along.</p>
-<h1 id=quirks>Quirks</h1>
-<p>This setup actually has a few quirks, but luckily I&rsquo;ve discovered them for you!</p>
-<ul>
+or <code>docker-compose logs -f</code> to follow along.</p><h1 id=quirks>Quirks</h1><p>This setup actually has a few quirks, but luckily I&rsquo;ve discovered them for you!</p><ul>
 <li>The <code>linuxserver/code-server</code> image&rsquo;s home actually isn&rsquo;t <code>/home</code> like you&rsquo;d
 expect, but is actually located at <code>/config</code> in the container. This means most
 of your system configuration (including VS Code&rsquo;s) will be located in this
@@ -219,8 +158,7 @@ folder, and you&rsquo;ll need to place any of your keys or configs that you want
 accessible at <code>~/.ssh</code> and <code>~/.config</code> in the <code>config</code> folder that you
 created. I&rsquo;ve mapped <code>/home</code> to my projects which are located in the <code>home</code>
 folder you created, but you can also use a different path, or remove the
-<code>/home</code> folder from your configuration completely if you&rsquo;d like.</li>
-<li>Since Microsoft prohibits the use of any non-Microsoft VS Code instances from
+<code>/home</code> folder from your configuration completely if you&rsquo;d like.</li><li>Since Microsoft prohibits the use of any non-Microsoft VS Code instances from
 using Microsoft&rsquo;s extension marketplace, <code>code-server</code> is <a href=https://coder.com/docs/code-server/latest/FAQ#why-cant-code-server-use-microsofts-extension-marketplace>unable to use the
 official VS Code extensions
 market</a>
@@ -231,157 +169,144 @@ but you can still <a href=https://coder.com/docs/code-server/latest/FAQ#how-do-i
 manually</a>
 if it&rsquo;s not available. The <code>SERVICE_URL</code> and <code>ITEM_URL</code> environment variables
 in <code>docker-compose.yml</code> are already set up to use the Open VSX registry, so
-you should be good to go there.</li>
-<li>By default, the <code>code-server</code> image isn&rsquo;t able to access your host machine&rsquo;s
+you should be good to go there.</li><li>By default, the <code>code-server</code> image isn&rsquo;t able to access your host machine&rsquo;s
 SSH agent. I use Arch Linux, so I&rsquo;ve added the <code>SSH_AUTH_SOCK</code> environment
 variable to point to the SSH agent at <code>/run/ssh-agent.socket</code>, but if your
 SSH agent socket is located at a different directory, you&rsquo;ll need to modify
-the <code>docker-compose.yml</code> with the correct location.</li>
-<li>Similarly, the <code>code-server</code> image isn&rsquo;t able to access your host machine&rsquo;s
+the <code>docker-compose.yml</code> with the correct location.</li><li>Similarly, the <code>code-server</code> image isn&rsquo;t able to access your host machine&rsquo;s
 Docker daemon as well. If you need to do Docker development from within this
 container, you can forward the Docker socket similarly to the SSH agent by
 <a href=https://github.com/coder/code-server/blob/main/docs/FAQ.md#can-i-use-docker-in-a-code-server-container>following these
 instructions</a>.
 There&rsquo;s also <a href=https://github.com/microsoft/vscode-dev-containers/tree/main/containers/docker-in-docker>Docker in
 Docker</a>
-if you really need it and you&rsquo;ve seen <em>Inception</em> too many times.</li>
-</ul>
-<h1 id=conclusion>Conclusion</h1>
-<p>I&rsquo;ve been using this setup for a few months now, and while it required some
+if you really need it and you&rsquo;ve seen <em>Inception</em> too many times.</li></ul><h1 id=conclusion>Conclusion</h1><p>I&rsquo;ve been using this setup for a few months now, and while it required some
 setup, I&rsquo;ve really enjoyed daily driving it. If you spot any issues with this
 post, feel free to let me know at
 <a href=mailto:olivia@sculley.dev>olivia@sculley.dev</a> and I&rsquo;ll be more than happy to
-take a look!</p>
-<h1 id=configuration>Configuration</h1>
-<h2 id=dockerfile><code>Dockerfile</code></h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-docker data-lang=docker><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> linuxserver/code-server</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># base packages</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get update -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get upgrade -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    build-essential <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    autoconf <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libncurses5-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libssh-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    unixodbc-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    git <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    curl <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    unzip <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    wget <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    inotify-tools<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># neovim</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y software-properties-common<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> add-apt-repository ppa:neovim-ppa/stable<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt update -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt install -qq -y neovim<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># python</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python3 <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python3-pip <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python3-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python3-setuptools <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libxml2-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libxslt-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    python3-lxml <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libffi-dev <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    libsqlite3-dev<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># hugo</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> mkdir $HOME/go <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    cd $HOME/go <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    wget -c https://golang.org/dl/go1.17.1.linux-amd64.tar.gz <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    tar -C /usr/local -xzf go1.17.1.linux-amd64.tar.gz<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> PATH<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$PATH<span style=color:#e6db74>:/usr/local/go/bin&#34;</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> GOPATH<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/opt/go&#34;</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> mkdir $HOME/hugo <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    mkdir $HOME/hugo/src/ <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    cd $HOME/hugo/src <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    git clone https://github.com/gohugoio/hugo.git <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    cd hugo <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    go install --tags extended <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>    cd $HOME/<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># livereload</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y python3-livereload<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># clean</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get clean -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get autoclean -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get autoremove -qq -y<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> rm -rf /usr/share/doc/*<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> LANG C.UTF-8<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># setup direnv</span><span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> curl -sfL https://direnv.net/install.sh | bash<span style=color:#960050;background-color:#1e0010>
-</span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> echo <span style=color:#e6db74>&#39;eval &#34;$(direnv hook bash)&#34;&#39;</span> &gt;&gt; $HOME/.bashrc<span style=color:#960050;background-color:#1e0010>
-</span></code></pre></div><h2 id=docker-compose><code>Docker Compose</code></h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span>
-
-<span style=color:#f92672>services</span>:
-  <span style=color:#f92672>nginx</span>:
-    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>nginx:latest</span>
-    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>production_nginx</span>
-    <span style=color:#f92672>volumes</span>:
-      <span style=color:#75715e># Make sure to reverse proxy to `http://code-server:8443`!</span>
-      - <span style=color:#ae81ff>./nginx.conf:/etc/nginx/nginx.conf</span>
-    <span style=color:#f92672>ports</span>:
-      - <span style=color:#ae81ff>80</span>:<span style=color:#ae81ff>80</span>
-      - <span style=color:#ae81ff>443</span>:<span style=color:#ae81ff>443</span>
-
-  <span style=color:#f92672>code-server</span>:
-    <span style=color:#f92672>build</span>:
-      <span style=color:#f92672>context</span>: <span style=color:#ae81ff>./</span>
-    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>code-server</span>
-    <span style=color:#f92672>environment</span>:
-      - <span style=color:#ae81ff>PUID=1000</span>
-      - <span style=color:#ae81ff>PGID=1000</span>
-      - <span style=color:#ae81ff>TZ=US/Eastern</span>
-      - <span style=color:#ae81ff>PROXY_DOMAIN=code.yourcool.tld</span>
-      - <span style=color:#ae81ff>PASSWORD=yourpassword</span> <span style=color:#75715e># very important, otherwise it&#39;s an open shell on your container which is Not Good™</span>
-      <span style=color:#75715e># Alternatively, use a hashed password</span>
-      <span style=color:#75715e># - HASHED_PASSWORD=yourhashedpassword</span>
-      - <span style=color:#ae81ff>SUDO_PASSWORD=verycoolsudopassword</span>
-      <span style=color:#75715e># - SUDO_PASSWORD_HASH</span>
-      <span style=color:#75715e># The following configurations are optional</span>
-      - <span style=color:#ae81ff>EDITOR=nvim</span>
-      - <span style=color:#ae81ff>DEFAULT_WORKSPACE=/home</span>
-      - <span style=color:#ae81ff>SERVICE_URL=https://open-vsx.org/vscode/gallery</span>
-      - <span style=color:#ae81ff>ITEM_URL=https://open-vsx.org/vscode/item</span>
-      - <span style=color:#ae81ff>SSH_AUTH_SOCK=/ssh-agent.socket</span> <span style=color:#75715e># corresponds to bind mount below</span>
-    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
-    <span style=color:#f92672>volumes</span>:
-      - <span style=color:#ae81ff>./data/:/home</span>
-      - <span style=color:#ae81ff>./config:/config/</span>
-      <span style=color:#75715e># Forward local machine SSH agent</span>
-      - <span style=color:#ae81ff>/run/ssh-agent.socket:/ssh-agent.socket</span>
-    <span style=color:#f92672>depends_on</span>:
-      - <span style=color:#ae81ff>code-server-db</span>
-    <span style=color:#f92672>expose</span>:
-      - <span style=color:#e6db74>&#34;8443&#34;</span>
-
-  <span style=color:#f92672>code-server-db</span>:
-    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>postgres:13</span>
-    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>code-server-db</span>
-    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
-    <span style=color:#f92672>environment</span>:
-      - <span style=color:#ae81ff>POSTGRES_USER=postgres</span>
-      - <span style=color:#ae81ff>POSTGRES_PASSWORD=postgres</span>
-      - <span style=color:#ae81ff>POSTGRES_DB=postgres</span>
-    <span style=color:#f92672>volumes</span>:
-      - <span style=color:#ae81ff>./postgres:/var/lib/postgresql/data</span>
-</code></pre></div><h2 id=dockerignore><code>.dockerignore</code></h2>
-<pre tabindex=0><code>data/
+take a look!</p><h1 id=configuration>Configuration</h1><h2 id=dockerfile><code>Dockerfile</code></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-docker data-lang=docker><span style=display:flex><span><span style=color:#66d9ef>FROM</span><span style=color:#e6db74> linuxserver/code-server</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># base packages</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get update -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get upgrade -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    build-essential <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    autoconf <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libncurses5-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libssh-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    unixodbc-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    git <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    curl <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    unzip <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    wget <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    inotify-tools<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># neovim</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y software-properties-common<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> add-apt-repository ppa:neovim-ppa/stable<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt update -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt install -qq -y neovim<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># python</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3 <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-pip <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-setuptools <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxml2-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libxslt-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    python3-lxml <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libffi-dev <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    libsqlite3-dev<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># hugo</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> mkdir $HOME/go <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    cd $HOME/go <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    wget -c https://golang.org/dl/go1.17.1.linux-amd64.tar.gz <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    tar -C /usr/local -xzf go1.17.1.linux-amd64.tar.gz<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> PATH<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;</span>$PATH<span style=color:#e6db74>:/usr/local/go/bin&#34;</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> GOPATH<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/opt/go&#34;</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> mkdir $HOME/hugo <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    mkdir $HOME/hugo/src/ <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    cd $HOME/hugo/src <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    git clone https://github.com/gohugoio/hugo.git <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    cd hugo <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    go install --tags extended <span style=color:#f92672>&amp;&amp;</span> <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>    cd $HOME/<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># livereload</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get install -qq -y python3-livereload<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># clean</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get clean -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get autoclean -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> apt-get autoremove -qq -y<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> rm -rf /usr/share/doc/*<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>ENV</span> LANG C.UTF-8<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#75715e># setup direnv</span><span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> curl -sfL https://direnv.net/install.sh | bash<span style=color:#960050;background-color:#1e0010>
+</span></span></span><span style=display:flex><span><span style=color:#960050;background-color:#1e0010></span><span style=color:#66d9ef>RUN</span> echo <span style=color:#e6db74>&#39;eval &#34;$(direnv hook bash)&#34;&#39;</span> &gt;&gt; $HOME/.bashrc<span style=color:#960050;background-color:#1e0010>
+</span></span></span></code></pre></div><h2 id=docker-compose><code>Docker Compose</code></h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>services</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>nginx</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>nginx:latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>production_nginx</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>      <span style=color:#75715e># Make sure to reverse proxy to `http://code-server:8443`!</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>./nginx.conf:/etc/nginx/nginx.conf</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>80</span>:<span style=color:#ae81ff>80</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>443</span>:<span style=color:#ae81ff>443</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>code-server</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>context</span>: <span style=color:#ae81ff>./</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>code-server</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>PUID=1000</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>PGID=1000</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>TZ=US/Eastern</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>PROXY_DOMAIN=code.yourcool.tld</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>PASSWORD=yourpassword</span> <span style=color:#75715e># very important, otherwise it&#39;s an open shell on your container which is Not Good™</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># Alternatively, use a hashed password</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># - HASHED_PASSWORD=yourhashedpassword</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>SUDO_PASSWORD=verycoolsudopassword</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># - SUDO_PASSWORD_HASH</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># The following configurations are optional</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>EDITOR=nvim</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>DEFAULT_WORKSPACE=/home</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>SERVICE_URL=https://open-vsx.org/vscode/gallery</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>ITEM_URL=https://open-vsx.org/vscode/item</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>SSH_AUTH_SOCK=/ssh-agent.socket</span> <span style=color:#75715e># corresponds to bind mount below</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>./data/:/home</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>./config:/config/</span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e># Forward local machine SSH agent</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>/run/ssh-agent.socket:/ssh-agent.socket</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>depends_on</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>code-server-db</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>expose</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;8443&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>code-server-db</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>postgres:13</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>container_name</span>: <span style=color:#ae81ff>code-server-db</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>restart</span>: <span style=color:#ae81ff>always</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_USER=postgres</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_PASSWORD=postgres</span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>POSTGRES_DB=postgres</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>volumes</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>./postgres:/var/lib/postgresql/data</span>
+</span></span></code></pre></div><h2 id=dockerignore><code>.dockerignore</code></h2><pre tabindex=0><code>data/
 config/
 postgres/
 nginx.conf
-</code></pre>
-</div>
-</div>
-<div id=post-footer class="post-footer main-content-wrap">
+</code></pre></div></div><div id=post-footer class="post-footer main-content-wrap">
 <div class=post-actions-wrap>
 <nav>
 <ul class="post-actions post-action-nav">
@@ -390,37 +315,25 @@ nginx.conf
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
 </a>
-</li>
-<li class=post-action>
+</li><li class=post-action>
 <a class="post-action-btn btn btn--default tooltip--top" href=https://olivia.sculley.dev/posts/hosted/ data-tooltip=Self-hosted aria-label="PREVIOUS: Self-hosted">
 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
 <i class="fa fa-angle-right"></i>
 </a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
+</li></ul></nav><ul class="post-actions post-action-share">
 <li class="post-action hide-lg hide-md hide-sm">
 <a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
 <i class="fa fa-share-alt" aria-hidden=true></i>
 </a>
-</li>
-<li class=post-action>
+</li><li class=post-action>
 <a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
 <i class="fa fa-arrow-up" aria-hidden=true></i>
 </a>
-</li>
-</ul>
-</div>
-</div>
-</article>
-<footer id=footer class=main-content-wrap>
+</li></ul></div></div></article><footer id=footer class=main-content-wrap>
 <span class=copyrights>
 &copy; 2022 Olivia Sculley. All Rights Reserved
 </span>
-</footer>
-</div>
-<div id=bottom-bar class=post-bottom-bar data-behavior=5>
+</footer></div><div id=bottom-bar class=post-bottom-bar data-behavior=5>
 <div class=post-actions-wrap>
 <nav>
 <ul class="post-actions post-action-nav">
@@ -429,55 +342,34 @@ nginx.conf
 <i class="fa fa-angle-left"></i>
 <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
 </a>
-</li>
-<li class=post-action>
+</li><li class=post-action>
 <a class="post-action-btn btn btn--default tooltip--top" href=https://olivia.sculley.dev/posts/hosted/ data-tooltip=Self-hosted aria-label="PREVIOUS: Self-hosted">
 <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
 <i class="fa fa-angle-right"></i>
 </a>
-</li>
-</ul>
-</nav>
-<ul class="post-actions post-action-share">
+</li></ul></nav><ul class="post-actions post-action-share">
 <li class="post-action hide-lg hide-md hide-sm">
 <a class="post-action-btn btn btn--default btn-open-shareoptions" href=#btn-open-shareoptions aria-label="Share this post">
 <i class="fa fa-share-alt" aria-hidden=true></i>
 </a>
-</li>
-<li class=post-action>
+</li><li class=post-action>
 <a class="post-action-btn btn btn--default" href=#top aria-label="Back to top">
 <i class="fa fa-arrow-up" aria-hidden=true></i>
 </a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div id=about>
+</li></ul></div></div></div><div id=about>
 <div id=about-card>
 <div id=about-btn-close>
 <i class="fa fa-times"></i>
-</div>
-<img id=about-card-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
-<h4 id=about-card-name>Olivia Sculley</h4>
-<div id=about-card-bio><p>Fullstack Web Developer, former VR/Game Dev</p>
-<p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p>
-<p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p>
-</div>
-<div id=about-card-job>
+</div><img id=about-card-picture src=https://olivia.sculley.dev/images/headshot.jpg alt="Author's picture">
+<h4 id=about-card-name>Olivia Sculley</h4><div id=about-card-bio><p>Fullstack Web Developer, former VR/Game Dev</p><p>I&rsquo;m currently a software developer at <a href=https://www.simplybinary.com/>Simply Binary</a> in Greenville, SC. I also recently graduated from <a href=https://www.purdue.edu/>Purdue University&rsquo;s</a> <a href=https://www.cs.purdue.edu/>computer science</a> department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I&rsquo;ve also used Python, SQL, C and C++ as well.</p><p><a href=https://olivia.sculley.dev/resume.pdf>Resume</a></p></div><div id=about-card-job>
 <i class="fa fa-briefcase"></i>
 <br>
 Simply Binary
-</div>
-<div id=about-card-location>
+</div><div id=about-card-location>
 <i class="fa fa-map-marker-alt"></i>
 <br>
 Greenville, SC
-</div>
-</div>
-</div>
-<div id=cover style=background-image:url(https://olivia.sculley.dev/images/bg.jpg)></div>
-<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
+</div></div></div><div id=cover style=background-image:url(https://olivia.sculley.dev/images/bg.jpg)></div><script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/highlight.min.js integrity="sha512-z+/WWfyD5tccCukM4VvONpEtLmbAm5LDu7eKiyMQJ9m7OfPEDL7gENyDRL3Yfe8XAuGsS2fS4xSMnl6d30kqGQ==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==" crossorigin=anonymous referrerpolicy=no-referrer></script>
 <script src=https://olivia.sculley.dev/js/script-tgkykzhc1r9sl5ix3fdbw79kcburjiaz1d4udrgis6mbw65dpgsesuutzza.min.js></script>
@@ -491,6 +383,5 @@ Greenville, SC
 <script async crossorigin=anonymous defer integrity="sha512-1NmkjnEDnwwwcu28KoQF8vs3oaPFokQHbmbtwGhFfeDsQZtVFI8zW2aE9O8yMYdpdyKV/5blE4pSWw4Z/Sv97w==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/stylus.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-B2wSfruPjr8EJL6IIzQr1eAuDwrsfIfccNf/LCEdxELCgC/S/ZMt/Uvk80aD79m7IqOqW+Sw8nbkvha20yZpzg==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/swift.min.js></script>
 <script async crossorigin=anonymous defer integrity="sha512-28oDiQZGKUVN6wQ7PSLPNipOcmkCALXKwOi7bnkyFf8QiMZQxG9EQoy/iiNx6Zxj2cG2SbVa4dXKigQhu7GiFw==" src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/languages/yaml.min.js></script>
-<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$('pre.code-highlight > code, pre > code').each(function(b,a){$(this).hasClass('codeblock')||$(this).addClass('codeblock'),hljs.highlightBlock(a)})})</script>
-</body>
-</html>
+<script>$(document).ready(function(){hljs.configure({classPrefix:'',useBR:!1}),$("pre.code-highlight > code, pre > code").each(function(t,e){$(this).hasClass("codeblock")||$(this).addClass("codeblock"),hljs.highlightBlock(e)})})</script>
+</body></html>
