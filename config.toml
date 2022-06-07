@@ -28,7 +28,7 @@ canonifyurls = true
 
 [author]
   name = "Olivia Sculley"
-  bio = "Fullstack Web Developer, former VR/Game Dev\n\n I'm currently a software developer at [Simply Binary](https://www.simplybinary.com/) in Greenville, SC. I also recently graduated from [Purdue University's](https://www.purdue.edu/) [computer science](https://www.cs.purdue.edu/) department. I have experience using Elixir/Phoenix, C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I've also used Python, SQL, C and C++ as well. \n\n[Resume](/resume.pdf)"
+  bio = "Fullstack Web Developer, former VR/Game Dev\n\n I'm currently a software developer at [Simply Binary](https://www.simplybinary.com/) in Greenville, SC, focused on getting our home-grown product Slipstream off the ground! As a result, I've gained a lot of experience and love for Elixir and the Phoenix Framework.\n\nI previously graduated from [Purdue University's](https://www.purdue.edu/) [computer science](https://www.cs.purdue.edu/) department, where I gained experience with C#/.NET, Unity 3D, and shell scripting to make applications for the web, desktops, Linux systems, and VR & AR headsets. I've also used Python, SQL, C and C++ as well. \n\n[Resume](/resume.pdf)"
   job = "Simply Binary"
   location = "Greenville, SC"
   picture = "images/headshot.jpg"
