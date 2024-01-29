@@ -1,0 +1,226 @@
+\documentclass[11pt]{extarticle}
+\usepackage{anyfontsize}
+\usepackage{overpic}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{plex-mono}
+\usepackage[defaultsans]{opensans}
+\usepackage{hyperref}
+
+\graphicspath{{/}}
+\hypersetup{
+	colorlinks=false,
+	allbordercolors={0.32 0.32 0.32},
+	pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+\geometry{a4paper, includefoot, margin=0.5in, bottom=0.25in}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\scriptsize \lighttext{v1.0.0}}
+\renewcommand{\headrulewidth}{0pt}
+
+\definecolor{text}{HTML}{222222}
+\definecolor{titletext}{HTML}{555555}
+\definecolor{lighttext}{HTML}{444444}
+\definecolor{purple}{HTML}{7d7aa1}
+\definecolor{page}{HTML}{EAEAEA}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setmainfont[Color=text]{Open Sans}
+\setsansfont[Color=text]{Open Sans}
+\newfontfamily\titletext[Color=titletext]{Open Sans}
+\newfontfamily\lighttext[Color=lighttext]{Open Sans}
+\newfontfamily\sectiontext[Color=purple]{Open Sans}
+
+\title{Olivia Sculley's CV}
+\author{Olivia Sculley}
+\date{\today}
+
+\newcommand{\entry}[5]{
+	\begin{tabularx}{\linewidth}{l@{, }l@{ – }lXr}
+			\textbf{#1} & #2 & \lighttext \textit{#3} & & #4 – #5
+	\end{tabularx}
+	\vspace{-16pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+	\section*{\sectiontext #1}
+	\vspace{-2pt}
+}
+
+\begin{document}
+\pagecolor{page}
+\color{text}
+
+\begin{title}
+  \centering
+  \begin{center}
+  \begin{overpic}[width=\textwidth]{../bg.jpg}
+    \put (2.5, 9.5) {\lighttext \fontsize{25}{0}\selectfont Olivia Sculley}
+    \put (3, 3.5) {\parbox{20em}{
+			\lighttext
+			\linespread{1.1}
+			\selectfont
+			\url{https://olivia.sculley.dev} \\
+			\href{mailto:olivia@sculley.dev}{olivia@sculley.dev}
+		}}
+  \end{overpic}
+  \end{center}
+\end{title}
+
+\sectiontitle{Objective}
+To work with domain experts on technical problems to create high quality
+software solutions.
+
+\sectiontitle{Education}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\entry{Purdue University}{West Lafayette, IN}{GPA: 3.88}{Aug 2017}{Dec 2020}
+	\begin{itemize}
+		\item B.S. in Computer Science with concentration in software engineering
+		and minor in mathematics
+		\item Graduated with distinction, dean's list and semester honors
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\sectiontitle{Skills}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\begin{itemize}
+		\item \textbf{Languages:} C++, Elixir, HTML5, CSS, JavaScript, TypeScript,
+		SQL, Python, Bash, C\#/.NET
+		\item \textbf{Frameworks:} Phoenix, Solid JS, Vue, Git, Tailwind CSS,
+		Laravel, Docker, Unity 3D
+		\item \textbf{Platforms:} Github, AWS, Slack, Stripe, Sentry, Drone,
+		CodeShip, Prometheus, Grafana, Loki
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\sectiontitle{Involvement}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\entry{Traveler's Rest Historic Society}{Greenville, SC}{Membership/Marketing}{Jun 2022}{Present}
+	\begin{itemize}
+		\item Maintained \href{https://travelersresthistoricalsociety.org}{TRHS
+		website}, lead migration from Squarespace to Wordpress
+	\end{itemize}
+
+	\item[]
+	\entry{HackGreenville Labs}{Greenville, SC}{Contributor}{Jun 2022}{Present}
+	\begin{itemize}
+		\item Improved the \href{https://hackgreenville.com/}{HackGreenville
+			website}, created
+			\href{https://github.com/hackgvl/slack-events-bot}{Slack bot project}
+			to post weekly rollups of local tech meetups from
+			\href{https://github.com/hackgvl/OpenData}{Open Data events}
+			and a
+			\href{https://github.com/hackgvl/open-map-data-multi-layers-demo}{map
+			project} displaying
+			\href{https://github.com/hackgvl/OpenData}{Open Data map layers}
+		\item The group formerly known as Code for Greenville
+	\end{itemize}
+
+	\item[]
+	\entry{Simply Binary}{Greenville, SC}{Software Developer}{Aug 2020}{Present}
+	\begin{itemize}
+		\item Lead development on \href{https://www.goslipstream.app/}{Slipstream}
+		using Elixir, Phoenix, and Tailwind CSS, backed by AWS and Gigalixir
+		\item Implemented features like versioning, tenancy, synthesized data
+		exports, notifications, Sentry \\
+		error reporting, custom integrations, UI component library, and automations
+		with Github Actions
+		\item Mentored team members, added documentation with Mermaid, created UI
+		component storybook, improved localization, accessibility, onboarding, and
+		tech debt prioritization
+		\item Prepared a C++ robotic metrology project for production use.
+	\end{itemize}
+
+	\item[]
+	\entry{Purdue Envision Center}{West Lafayette, IN}{Simulation Programmer}{Jan 2019}{Aug 2020}
+	\begin{itemize}
+		\item Developed interactive 3D/VR simulations for web and desktop using
+		C\#/.NET with Unity 3D
+		\item Implemented DocFX documentation and unit tests, facilitated Git LFS
+		versioning for assets
+	\end{itemize}
+
+	\item[]
+	\entry{JunLab}{West Lafayette, IN}{Research Assistant}{Apr 2019}{May 2020}
+	\begin{itemize}
+		\item Lead development on
+		\href{https://github.com/oliviasculley/nervv}{NERVV}, an open-source Unity
+		3D-based framework to synchronize and control ROS-based real-world
+		manufacturing devices with support for virtual reality devices.
+		\item Worked with Dr. Huitaek Yun at
+		\href{https://web.ics.purdue.edu/~jun25/}{Jun Laboratory} on NERVV
+	\end{itemize}
+
+	\item[]
+	\entry{Purdue Virtual Reality Club}{West Lafayette, IN}{Treasurer}{Apr 2019}{May 2020}
+	\begin{itemize}
+		\item As an officer, I hosted learning sessions in technologies such as
+		\href{https://aframe.io/}{A-frame} and \href{https://unity.com/}{Unity 3D},
+		mentored members in VR development, and lead educational club-wide projects
+		through the PVRC's \href{https://github.com/pvrc}{Github} page.
+		\item As the treasurer, I helped to manage overall finances and plan events.
+		\item The PVRC can be found on
+		\href{https://www.facebook.com/groups/777681062280083/}{Facebook},
+		\href{https://discord.gg/2bnDcKE}{Discord} and
+		\href{https://github.com/pvrc}{Github}.
+	\end{itemize}
+
+	\item[]
+	\entry{CS 390-VR / CS 390-VRT}{West Lafayette, IN}{Teaching Assistant}{Aug 2018}{Dec 2019}
+	\begin{itemize}
+		\item Participated in course development of
+		\href{https://www.cs.purdue.edu/homes/cs390vr/}{CS 390-VR} and CS 390-VRT
+		under \href{https://www.cs.purdue.edu/people/faculty/grr}{Dr. Gustavo
+		Rodriguez-Rivera} at Purdue University. This course served as an
+		introduction to virtual reality and real-time graphics development with game
+		engines such as Unity 3D and Unreal Engine.
+		\item As an undergraduate teaching assistant, I developed and delivered
+		bi-weekly lectures, created and graded assignments, and led lab sessions
+		where students worked with VR headsets such as the HTC Vive and Oculus Rift.
+	\end{itemize}
+
+	\item[]
+	\entry{Chopralab}{West Lafayette, IN}{Research Assistant}{Feb 2018}{Aug 2018}
+	\begin{itemize}
+		\item Created the mobile version of
+		\href{https://chopralab.github.io/MINT/index.html}{MINT}, which visualizes
+		protein ligands at \href{http://www.chopralab.com/}{Chopralab}.
+		\item Second-authored a research publication which is
+		\href{https://doi.org/10.26434/chemrxiv.9889994.v1}{available on ChemRxiv}.
+		\item Helped design a minimalist and responsive lab website with a news
+		feature using Jekyll, and created the MINT website linked above.
+	\end{itemize}
+
+	\item[]
+	\entry{Rival Esports}{Virtual}{Broadcast Media Artist}{Feb 2016}{Sep 2017}
+	\begin{itemize}
+		\item Produced animated lower thirds, transitions and motion graphics that
+		were composited with OBS for \href{https://rivalesports.com/}{Rival
+		Esports}, a Rocket League and Battlerite Esports tournament.
+		\item Gave away hundreds of dollars and streaming to thousands of live
+		viewers during our weekly Rocket League tournaments, and was featured on the
+		frontpage of \href{https://www.twitch.tv/rivalesports}{twitch.tv}!
+		\item Combined motion graphics with custom video-game modding technology to
+		establish Rival Esports with a visual excellence that easily surpassed any
+		other broadcasters in the area and emulated the quality of professional
+		sports broadcasts.
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\end{document}

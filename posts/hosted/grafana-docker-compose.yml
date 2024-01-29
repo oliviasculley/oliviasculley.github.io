@@ -1,0 +1,97 @@
+version: '3'
+
+services:
+  grafana-prometheus:
+    image: prom/prometheus:latest
+    container_name: grafana-prometheus
+    restart: always
+    volumes:
+      - ./prometheus:/config
+      - ./data:/data
+    command:
+      - '--config.file=/config/prometheus.yml'
+      - '--storage.tsdb.path=/data'
+    expose:
+      - 9090
+
+  grafana-node-exporter:
+    image: prom/node-exporter:latest
+    container_name: grafana-node-exporter
+    restart: always
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--no-collector.rapl'
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    expose:
+      - 9100
+
+  grafana-cadvisor:
+    image: gcr.io/cadvisor/cadvisor:latest
+    container_name: grafana-cadvisor
+    restart: always
+    privileged: true
+    expose:
+      - 8080
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+      - /dev:/dev:ro
+    devices:
+      - "/dev/kmsg"
+
+  # Enable monitoring on Nginx Proxy Manager first
+  # https://github.com/jc21/nginx-proxy-manager/issues/561
+
+  # grafana-nginx:
+  #   image: nginx/nginx-prometheus-exporter:latest
+  #   container_name: grafana-nginx
+  #   restart: always
+  #   command:
+  #     - '-nginx.scrape-uri=http://nginx:82/nginx_status'
+  #   expose:
+  #     - 9113
+
+  grafana-redis:
+    image: redis:latest
+    container_name: grafana-redis
+    restart: always
+    expose:
+      - 6379
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    expose:
+      - 9009
+    volumes:
+      - ./grafana:/var/lib/grafana
+    depends_on:
+      - grafana-redis
+      - grafana-prometheus
+      - grafana-node-exporter
+      - grafana-cadvisor
+      - grafana-nginx
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_SERVER_DOMAIN=grafana.domain.tld
+      - GF_SERVER_HTTP_PORT=9009
+      - GF_SMTP_ENABLED=true
+      - GF_SMTP_HOST=
+      - GF_SMTP_USER=
+      - GF_SMTP_PASSWORD=
+      - GF_SMTP_FROM_ADDRESS=
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider https://grafana.domain.tld || exit 1"]
+      interval: 60s
+      timeout: 5s
+      retries: 5

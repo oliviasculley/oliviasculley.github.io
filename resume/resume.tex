@@ -1,0 +1,183 @@
+\documentclass[11pt]{extarticle}
+\usepackage{anyfontsize}
+\usepackage{overpic}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{xstring}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[T1]{fontenc}
+\usepackage{plex-mono}
+\usepackage[defaultsans]{opensans}
+\usepackage{hyperref}
+
+\graphicspath{{/}}
+\hypersetup{
+	colorlinks=false,
+	allbordercolors={0.32 0.32 0.32},
+	pdfborderstyle={/S/U/W 1}
+}
+\urlstyle{same}
+\geometry{a4paper, includefoot, margin=0.5in, bottom=0.25in}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\scriptsize \lighttext{v8.0.0}}
+\renewcommand{\headrulewidth}{0pt}
+
+\definecolor{text}{HTML}{222222}
+\definecolor{titletext}{HTML}{555555}
+\definecolor{lighttext}{HTML}{444444}
+\definecolor{purple}{HTML}{7d7aa1}
+\definecolor{page}{HTML}{EAEAEA}
+
+\renewcommand{\familydefault}{\sfdefault}
+\setmainfont[Color=text]{Open Sans}
+\setsansfont[Color=text]{Open Sans}
+\newfontfamily\titletext[Color=titletext]{Open Sans}
+\newfontfamily\lighttext[Color=lighttext]{Open Sans}
+\newfontfamily\sectiontext[Color=purple]{Open Sans}
+
+\title{Olivia Sculley's Resume}
+\author{Olivia Sculley}
+\date{\today}
+
+\newcommand{\entry}[5]{
+	\begin{tabularx}{\linewidth}{l@{, }l@{ – }lXr}
+			\textbf{#1} & #2 & \lighttext \textit{#3} & & #4 – #5
+	\end{tabularx}
+	\vspace{-16pt}
+}
+
+\newcommand{\sectiontitle}[1]{
+	\section*{\sectiontext #1}
+	\vspace{-2pt}
+}
+
+\begin{document}
+\pagecolor{page}
+\color{text}
+
+\begin{title}
+  \centering
+  \begin{center}
+  \begin{overpic}[width=\textwidth]{../bg.jpg}
+    \put (2.5, 9.5) {\lighttext \fontsize{25}{0}\selectfont Olivia Sculley}
+    \put (3, 3.5) {\parbox{20em}{
+			\lighttext
+			\linespread{1.1}
+			\selectfont
+			\url{https://olivia.sculley.dev} \\
+			\href{mailto:olivia@sculley.dev}{olivia@sculley.dev}
+		}}
+  \end{overpic}
+  \end{center}
+\end{title}
+
+\sectiontitle{Work Experience}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\entry{Simply Binary}{Greenville, SC}{Software Developer}{Aug 2020}{Present}
+	\begin{itemize}
+		\item Lead development on \href{https://www.goslipstream.app/}{Slipstream}
+		using Elixir, Phoenix, and Tailwind CSS, backed by AWS and \\
+		Gigalixir
+		\item Implemented features like versioning, tenancy, synthesized data
+		exports, notifications, Sentry \\
+		error reporting, custom integrations, UI component library, and automations
+		with Github Actions
+		\item Mentored team members, added documentation with Mermaid, created UI
+		component storybook, improved accessibility, assisted with onboarding and
+		tech debt prioritization
+		\item Prepared a C++ robotic metrology project for production use
+	\end{itemize}
+
+	\item[]
+	\entry{Purdue Envision Center}{West Lafayette, IN}{Simulation Programmer}{Jan 2019}{Aug 2020}
+	\begin{itemize}
+		\item Developed interactive 3D/VR simulations for web and desktop using
+		C\#/.NET with Unity 3D
+		\item Implemented DocFX documentation and unit tests, facilitated Git LFS
+		versioning for assets
+	\end{itemize}
+
+	\item[]
+	\entry{JunLab}{West Lafayette, IN}{Research Assistant}{Apr 2019}{May 2020}
+	\begin{itemize}
+		\item Lead development on
+		\href{https://github.com/oliviasculley/nervv}{NERVV}, an open-source Unity
+		3D-based framework to synchronize and control ROS-based real-world
+		manufacturing devices with support for virtual reality devices.
+		\item Worked with Dr. Huitaek Yun at
+		\href{https://web.ics.purdue.edu/~jun25/}{Jun Laboratory} on NERVV
+	\end{itemize}
+
+	\item[]
+	\entry{CS 390-VR / CS 390-VRT}{West Lafayette, IN}{Teaching Assistant}{Aug 2018}{Dec 2019}
+	\begin{itemize}
+		\item Participated in course development of
+		\href{https://www.cs.purdue.edu/homes/cs390vr/}{CS 390-VR} and CS 390-VRT
+		under \href{https://www.cs.purdue.edu/people/faculty/grr}{Dr. Gustavo
+		Rodriguez-Rivera} at Purdue University.
+		\item Developed and delivered lectures, created and graded assignments, led
+		lab sessions
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\sectiontitle{Education}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\entry{Purdue University}{West Lafayette, IN}{GPA: 3.88}{Aug 2017}{Dec 2020}
+	\begin{itemize}
+		\item B.S. in Computer Science with concentration in software engineering
+		and minor in mathematics
+		\item Graduated with distinction, dean's list and semester honors
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\sectiontitle{Involvement and Projects}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\entry{Traveler's Rest Historic Society}{Greenville, SC}{Membership/Marketing}{Jun 2022}{Present}
+	\begin{itemize}
+		\item Maintained \href{https://travelersresthistoricalsociety.org}{TRHS
+		website}, lead migration from Squarespace to Wordpress
+	\end{itemize}
+
+	\item[]
+	\entry{HackGreenville Labs}{Greenville, SC}{Contributor}{Jun 2022}{Present}
+	\begin{itemize}
+		\item Improved the \href{https://hackgreenville.com/}{HackGreenville
+			website}, created
+			\href{https://github.com/hackgvl/slack-events-bot}{Slack bot project}
+			to post weekly rollups of local tech meetups from
+			\href{https://github.com/hackgvl/OpenData}{Open Data events}
+			and a
+			\href{https://github.com/hackgvl/open-map-data-multi-layers-demo}{map
+			project} displaying
+			\href{https://github.com/hackgvl/OpenData}{Open Data map layers}
+		\item The group formerly known as Code for Greenville
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\sectiontitle{Skills}
+\begin{itemize}[leftmargin=1em]
+	\item[]
+	\begin{itemize}
+		\item \textbf{Languages:} C++, Elixir, HTML5, CSS, JavaScript, TypeScript,
+		SQL, Python, Bash, C\#/.NET
+		\item \textbf{Frameworks:} Phoenix, Solid JS, Vue, Git, Tailwind CSS,
+		Laravel, Docker Compose, Unity 3D
+		\item \textbf{Platforms:} Github, AWS, Slack, Stripe, Sentry, Drone,
+		CodeShip, Prometheus, Grafana, Loki
+	\end{itemize}
+\end{itemize}
+\vspace{-20pt}
+
+\end{document}
